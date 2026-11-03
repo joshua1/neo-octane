@@ -1,0 +1,95 @@
+---
+title: Radio Group
+description: A set of checkable buttons where only one can be checked at a time.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/radio-group
+---
+
+<ComponentPreview component="radio-group">
+  ```tsx file=<rootDir>/src/examples/ui/radio-group/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="radio-group">
+  ```tsx file=<rootDir>/src/components/ui/radio-group.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { Label } from '@/components/ui/label.tsrx'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group.tsrx'
+```
+
+```tsx
+<RadioGroup defaultValue="comfortable">
+  <div class="flex items-center space-x-2">
+    <RadioGroupItem value="default" id="r1" />
+    <Label for="r1">Default</Label>
+  </div>
+  <div class="flex items-center space-x-2">
+    <RadioGroupItem value="comfortable" id="r2" />
+    <Label for="r2">Comfortable</Label>
+  </div>
+  <div class="flex items-center space-x-2">
+    <RadioGroupItem value="compact" id="r3" />
+    <Label for="r3">Compact</Label>
+  </div>
+</RadioGroup>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="radio-group" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/radio-group/index.tsrx
+  ```
+</ComponentPreview>
+
+### Description
+
+Radio group items with a description using the [Field](/docs/field) component.
+
+<ComponentPreview component="radio-group" example="description">
+  ```tsx file=<rootDir>/src/examples/ui/radio-group/description.tsrx
+  ```
+</ComponentPreview>
+
+### Choice Card
+
+Use `FieldLabel` to wrap the entire `Field` for a clickable card-style selection.
+
+<ComponentPreview component="radio-group" example="choice-card">
+  ```tsx file=<rootDir>/src/examples/ui/radio-group/choice-card.tsrx
+  ```
+</ComponentPreview>
+
+### Fieldset
+
+Use `FieldSet` and `FieldLegend` to group radio items with a label and description.
+
+<ComponentPreview component="radio-group" example="fieldset">
+  ```tsx file=<rootDir>/src/examples/ui/radio-group/fieldset.tsrx
+  ```
+</ComponentPreview>
+
+### Disabled
+
+Use the `disabled` prop on a `RadioGroupItem` to disable a single item, or on `RadioGroup` to disable all of them. Add `data-disabled` to the surrounding `Field` to dim its label.
+
+<ComponentPreview component="radio-group" example="disabled">
+  ```tsx file=<rootDir>/src/examples/ui/radio-group/disabled.tsrx
+  ```
+</ComponentPreview>
+
+### Invalid
+
+Use `aria-invalid` on `RadioGroupItem` and `data-invalid` on `Field` to show validation errors.
+
+<ComponentPreview component="radio-group" example="invalid">
+  ```tsx file=<rootDir>/src/examples/ui/radio-group/invalid.tsrx
+  ```
+</ComponentPreview>

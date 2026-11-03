@@ -1,0 +1,76 @@
+---
+title: Tooltip
+description: A popup that displays information related to an element when it receives keyboard focus or mouse hover.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/tooltip
+---
+
+<ComponentPreview component="tooltip">
+  ```tsx file=<rootDir>/src/examples/ui/tooltip/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="tooltip">
+  ```tsx file=<rootDir>/src/components/ui/tooltip.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { Button } from '@/components/ui/button.tsrx'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip.tsrx'
+```
+
+```tsx
+<TooltipProvider>
+  <Tooltip>
+    <TooltipTrigger render={<Button variant="noShadow" />}>Hover</TooltipTrigger>
+    <TooltipContent>
+      <p>Add to library</p>
+    </TooltipContent>
+  </Tooltip>
+</TooltipProvider>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="tooltip" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/tooltip/index.tsrx
+  ```
+</ComponentPreview>
+
+### Side
+
+Use the `side` prop on `TooltipContent` to change the position of the tooltip.
+
+<ComponentPreview component="tooltip" example="side">
+  ```tsx file=<rootDir>/src/examples/ui/tooltip/side.tsrx
+  ```
+</ComponentPreview>
+
+### With Keyboard Shortcut
+
+Render a [Kbd](/docs/kbd) inside `TooltipContent` to show the keyboard shortcut for an action.
+
+<ComponentPreview component="tooltip" example="with-keyboard-shortcut">
+  ```tsx file=<rootDir>/src/examples/ui/tooltip/with-keyboard-shortcut.tsrx
+  ```
+</ComponentPreview>
+
+### Disabled Button
+
+Show a tooltip on a disabled button by wrapping it with a span.
+
+<ComponentPreview component="tooltip" example="disabled-button">
+  ```tsx file=<rootDir>/src/examples/ui/tooltip/disabled-button.tsrx
+  ```
+</ComponentPreview>

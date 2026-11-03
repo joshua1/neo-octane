@@ -1,0 +1,178 @@
+---
+title: Form
+description: Building forms with Octane Hook Form and ArkType.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/form
+---
+
+<ComponentPreview component="form">
+  ```tsx file=<rootDir>/src/examples/ui/form/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="form">
+  ```tsx file=<rootDir>/src/components/ui/form.tsrx
+  ```
+</Installation>
+
+## Usage
+
+Forms validate with [ArkType](https://arktype.io) through a small local resolver, `lib/arktype-resolver.ts` (below). It replaces `@hookform/resolvers`, so the form has no dependencies outside the Octane bindings.
+
+```ts
+import { useForm } from "@octanejs/hook-form"
+import { type } from "arktype"
+
+import { Button } from "@/components/ui/button.tsrx"
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form.tsrx"
+import { Input } from "@/components/ui/input.tsrx"
+
+import { arktypeResolver } from "@/lib/arktype-resolver"
+```
+
+```tsx
+const formSchema = type({
+  username: type("string").narrow(
+    (username, ctx) =>
+      username.length >= 2 ||
+      ctx.reject({ message: "Username must be at least 2 characters." }),
+  ),
+})
+
+export function ProfileForm() @{
+  const form = useForm<typeof formSchema.infer>({
+    resolver: arktypeResolver(formSchema),
+    defaultValues: {
+      username: "",
+    },
+  })
+
+  function onSubmit(values: typeof formSchema.infer) {
+    console.log(values)
+  }
+
+  <Form {...form}>
+    <form onSubmit={form.handleSubmit(onSubmit)} class="space-y-8">
+      <FormField
+        control={form.control}
+        name="username"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Username</FormLabel>
+            <FormControl>
+              <Input placeholder="ekmas" {...field} />
+            </FormControl>
+            <FormDescription>This is your public display name.</FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <Button type="submit">Submit</Button>
+    </form>
+  </Form>
+}
+```
+
+### ArkType resolver
+
+```ts file=<rootDir>/src/lib/arktype-resolver.ts
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="form" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/form/index.tsrx
+  ```
+</ComponentPreview>
+
+### Basic
+
+A simple form with a text input and a textarea. On submit, the form data is validated against an ArkType schema and any errors are displayed next to each field.
+
+<ComponentPreview component="form" example="basic">
+  ```tsx file=<rootDir>/src/examples/ui/form/basic.tsrx
+  ```
+</ComponentPreview>
+
+### Input
+
+For input fields, spread the `field` object onto the `<Input />` component. Wrapping it in `<FormControl />` wires up the `id`, `aria-describedby` and `aria-invalid` attributes, and `<FormMessage />` shows the validation error.
+
+<ComponentPreview component="form" example="input">
+  ```tsx file=<rootDir>/src/examples/ui/form/input.tsrx
+  ```
+</ComponentPreview>
+
+### Textarea
+
+For textarea fields, spread the `field` object onto the `<Textarea />` component inside `<FormControl />`.
+
+<ComponentPreview component="form" example="textarea">
+  ```tsx file=<rootDir>/src/examples/ui/form/textarea.tsrx
+  ```
+</ComponentPreview>
+
+### Select
+
+For select components, use `field.value` and `field.onChange` on the `<Select />` component and wrap the `<SelectTrigger />` in `<FormControl />`. Pass `items` to `<Select />` so `<SelectValue />` renders the label instead of the raw value.
+
+<ComponentPreview component="form" example="select">
+  ```tsx file=<rootDir>/src/examples/ui/form/select.tsrx
+  ```
+</ComponentPreview>
+
+### Checkbox
+
+For checkbox arrays, use `field.value` and `onCheckedChange` with array manipulation. Give each `<Checkbox />` its own `<FormItem />` and `<FormControl />` so its label and error state are wired up.
+
+<ComponentPreview component="form" example="checkbox">
+  ```tsx file=<rootDir>/src/examples/ui/form/checkbox.tsrx
+  ```
+</ComponentPreview>
+
+### Radio Group
+
+For radio groups, use `field.value` and `onValueChange` on the `<RadioGroup />` component. Each `<RadioGroupItem />` gets its own `<FormItem />` and `<FormControl />`.
+
+<ComponentPreview component="form" example="radio-group">
+  ```tsx file=<rootDir>/src/examples/ui/form/radio-group.tsrx
+  ```
+</ComponentPreview>
+
+### Switch
+
+For switches, use `field.value` and `onCheckedChange` on the `<Switch />` component.
+
+<ComponentPreview component="form" example="switch">
+  ```tsx file=<rootDir>/src/examples/ui/form/switch.tsrx
+  ```
+</ComponentPreview>
+
+### Complex Forms
+
+Here is an example of a more complex form with multiple fields and validation.
+
+<ComponentPreview component="form" example="complex">
+  ```tsx file=<rootDir>/src/examples/ui/form/complex.tsrx
+  ```
+</ComponentPreview>
+
+### Array Fields
+
+`@octanejs/hook-form` provides a `useFieldArray` hook for managing dynamic array fields. This is useful when you need to add or remove fields dynamically.
+
+<ComponentPreview component="form" example="array">
+  ```tsx file=<rootDir>/src/examples/ui/form/array.tsrx
+  ```
+</ComponentPreview>

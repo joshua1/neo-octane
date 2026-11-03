@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd",
+  "type": "registry:ui",
+  "title": "Kbd",
+  "files": [
+    {
+      "path": "src/components/ui/kbd.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\ntype KbdProps = Record<string, any> & ClassProps\n\nfunction Kbd({ class: klass, className, ...props }: KbdProps) @{\n  <kbd\n    data-slot=\"kbd\"\n    class={cn(\n      \"pointer-events-none inline-flex h-5 w-fit min-w-5 items-center justify-center gap-1 rounded-base border-2 border-border bg-secondary-background px-1 font-sans text-xs font-heading text-foreground select-none in-data-[slot=tooltip-content]:border-main-foreground/30 in-data-[slot=tooltip-content]:bg-main in-data-[slot=tooltip-content]:text-main-foreground [&_svg:not([class*='size-'])]:size-3\",\n      className,\n      klass,\n    )}\n    {...props}\n  />\n}\n\nfunction KbdGroup({ class: klass, className, ...props }: KbdProps) @{\n  <kbd\n    data-slot=\"kbd-group\"\n    class={cn(\"inline-flex items-center gap-1\", className, klass)}\n    {...props}\n  />\n}\n\nexport { Kbd, KbdGroup }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

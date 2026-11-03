@@ -1,0 +1,131 @@
+---
+title: Tabs
+description: A set of layered sections of content that display one panel at a time.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/tabs
+---
+
+<ComponentPreview component="tabs">
+  ```tsx file=<rootDir>/src/examples/ui/tabs/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="tabs">
+  ```tsx file=<rootDir>/src/components/ui/tabs.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { Button } from "@/components/ui/button.tsrx"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card.tsrx"
+import { Input } from "@/components/ui/input.tsrx"
+import { Label } from "@/components/ui/label.tsrx"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs.tsrx"
+```
+
+```tsx
+<Tabs defaultValue="account" class="max-w-[400px]">
+  <TabsList class="grid w-full grid-cols-2">
+    <TabsTrigger value="account">Account</TabsTrigger>
+    <TabsTrigger value="password">Password</TabsTrigger>
+  </TabsList>
+  <TabsContent value="account">
+    <Card>
+      <CardHeader>
+        <CardTitle>Account</CardTitle>
+        <CardDescription>
+          Make changes to your account here. Click save when you&apos;re
+          done.
+        </CardDescription>
+      </CardHeader>
+      <CardContent class="grid gap-6">
+        <div class="grid gap-3">
+          <Label for="tabs-demo-name">Name</Label>
+          <Input id="tabs-demo-name" defaultValue="Pedro Duarte" />
+        </div>
+        <div class="grid gap-3">
+          <Label for="tabs-demo-username">Username</Label>
+          <Input id="tabs-demo-username" defaultValue="@octanejs" />
+        </div>
+      </CardContent>
+      <CardFooter>
+        <Button class="w-full" variant="neutral">
+          Save changes
+        </Button>
+      </CardFooter>
+    </Card>
+  </TabsContent>
+  <TabsContent value="password">
+    <Card>
+      <CardHeader>
+        <CardTitle>Password</CardTitle>
+        <CardDescription>
+          Change your password here. After saving, you&apos;ll be logged
+          out.
+        </CardDescription>
+      </CardHeader>
+      <CardContent class="grid gap-6">
+        <div class="grid gap-3">
+          <Label for="tabs-demo-current">Current password</Label>
+          <Input id="tabs-demo-current" type="password" />
+        </div>
+        <div class="grid gap-3">
+          <Label for="tabs-demo-new">New password</Label>
+          <Input id="tabs-demo-new" type="password" />
+        </div>
+      </CardContent>
+      <CardFooter>
+        <Button class="w-full" variant="neutral">
+          Save password
+        </Button>
+      </CardFooter>
+    </Card>
+  </TabsContent>
+</Tabs>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="tabs" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/tabs/index.tsrx
+  ```
+</ComponentPreview>
+
+### Vertical
+
+Use `orientation="vertical"` for vertical tabs.
+
+<ComponentPreview component="tabs" example="vertical">
+  ```tsx file=<rootDir>/src/examples/ui/tabs/vertical.tsrx
+  ```
+</ComponentPreview>
+
+### Disabled
+
+Use the `disabled` prop on `TabsTrigger` to disable a tab.
+
+<ComponentPreview component="tabs" example="disabled">
+  ```tsx file=<rootDir>/src/examples/ui/tabs/disabled.tsrx
+  ```
+</ComponentPreview>
+
+### Icons
+
+Place an icon before the label inside `TabsTrigger`.
+
+<ComponentPreview component="tabs" example="icons">
+  ```tsx file=<rootDir>/src/examples/ui/tabs/icons.tsrx
+  ```
+</ComponentPreview>

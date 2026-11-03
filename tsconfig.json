@@ -1,0 +1,31 @@
+{
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.tsrx", "vite.config.ts"],
+  "exclude": ["node_modules", "src/scripts"],
+
+  "tsrx": {
+    "compiler": "octane/compiler/volar"
+  },
+
+  "compilerOptions": {
+    "plugins": [{ "name": "@tsrx/typescript-plugin" }],
+    "target": "ES2022",
+    "jsx": "react-jsx",
+    "jsxImportSource": "octane",
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["vite/client", "node"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@public/*": ["./public/*"]
+    },
+
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    "skipLibCheck": true,
+    "strict": true
+  }
+}

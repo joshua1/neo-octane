@@ -1,0 +1,1605 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Neobrutalism Components",
+  "homepage": "https://neobrutalism.dev",
+  "author": "Samuel Breznjak <samke.me>",
+  "items": [
+    {
+      "name": "accordion",
+      "title": "Accordion",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/accordion.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "title": "Alert",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/alert.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "title": "Alert dialog",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/alert-dialog.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "title": "Avatar",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/avatar.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "title": "Badge",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/badge.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "title": "Breadcrumb",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/breadcrumb.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "nbutton",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/button.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "title": "Button",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/button.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "title": "Calendar",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/day-picker",
+        "date-fns@^4"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/calendar.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ncard",
+      "title": "Card",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/card.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "title": "Card",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/card.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "title": "Carousel",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/embla-carousel"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/carousel.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart",
+      "title": "Chart",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/recharts",
+        "@octanejs/lucide"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/ncard.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/chart.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "title": "Checkbox",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/checkbox.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "title": "Collapsible",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/collapsible.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command",
+      "title": "Command",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/cmdk"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/ndialog.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/command.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "title": "Context menu",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/context-menu.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ndialog",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/dialog.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "title": "Dialog",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/dialog.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "title": "Drawer",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/drawer.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "title": "Dropdown menu",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/dropdown-menu.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "form",
+      "title": "Form",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui",
+        "arktype",
+        "@octanejs/hook-form"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json",
+        "https://neobrutalism.dev/r/nlabel.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/form.tsrx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/lib/arktype-resolver.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "hover-card",
+      "title": "Hover card",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/hover-card.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "image-card",
+      "title": "Image card",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/image-card.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "title": "Input",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/input.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ninput",
+      "title": "Input",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/input.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp",
+      "title": "Input OTP",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/input-otp"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/input-otp.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "nlabel",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/label.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "title": "Label",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/label.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "marquee",
+      "title": "Marquee",
+      "docs": "Make sure there is enough content in `items` so it loops perfectly. Visit https://jackwhiting.co.uk/posts/creating-a-marquee-with-tailwind to learn more.",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/marquee.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menubar",
+      "title": "Menubar",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/menubar.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "title": "Navigation menu",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/navigation-menu.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "title": "Pagination",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/pagination.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "title": "Popover",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/popover.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "title": "Progress",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/progress.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "title": "Radio group",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/radio-group.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "resizable",
+      "title": "Resizable",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/resizable-panels"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/resizable.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "title": "Scroll area",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/scroll-area.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "title": "Select",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/select.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "title": "Sheet",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/sheet.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "nsheet",
+      "title": "Sheet",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/sheet.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "title": "Sidebar",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json",
+        "https://neobrutalism.dev/r/nsheet.json",
+        "https://neobrutalism.dev/r/ntooltip.json",
+        "https://neobrutalism.dev/r/ninput.json",
+        "https://neobrutalism.dev/r/nskeleton.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/sidebar.tsrx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/hooks/use-mobile.ts",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "title": "Skeleton",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/skeleton.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "nskeleton",
+      "title": "Skeleton",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/skeleton.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "title": "Slider",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/slider.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "title": "Switch",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/switch.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "title": "Table",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/table.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "title": "Tabs",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/tabs.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "title": "Textarea",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/textarea.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "title": "Tooltip",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/tooltip.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ntooltip",
+      "title": "Tooltip",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/tooltip.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "attachment",
+      "title": "Attachment",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/attachment.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bubble",
+      "title": "Bubble",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/bubble.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group",
+      "title": "Button Group",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/button-group.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "direction",
+      "title": "Direction",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/direction.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty",
+      "title": "Empty",
+      "type": "registry:ui",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/empty.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "title": "Field",
+      "type": "registry:ui",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nlabel.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/field.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group",
+      "title": "Input Group",
+      "type": "registry:ui",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json",
+        "https://neobrutalism.dev/r/ninput.json",
+        "https://neobrutalism.dev/r/ntextarea.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/input-group.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "item",
+      "title": "Item",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/item.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "kbd",
+      "title": "Kbd",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/kbd.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "marker",
+      "title": "Marker",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/marker.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "message",
+      "title": "Message",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/message.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "message-scroller",
+      "title": "Message Scroller",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/lucide"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/message-scroller.tsrx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/primitives/message-scroller/components.tsrx",
+          "type": "registry:lib",
+          "target": "components/primitives/message-scroller/components.tsrx"
+        },
+        {
+          "path": "src/components/primitives/message-scroller/geometry.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/message-scroller/geometry.ts"
+        },
+        {
+          "path": "src/components/primitives/message-scroller/index.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/message-scroller/index.ts"
+        },
+        {
+          "path": "src/components/primitives/message-scroller/stores.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/message-scroller/stores.ts"
+        },
+        {
+          "path": "src/components/primitives/message-scroller/types.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/message-scroller/types.ts"
+        },
+        {
+          "path": "src/components/primitives/message-scroller/use-message-scroller-commands.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/message-scroller/use-message-scroller-commands.ts"
+        },
+        {
+          "path": "src/components/primitives/message-scroller/use-message-scroller-controller.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/message-scroller/use-message-scroller-controller.ts"
+        },
+        {
+          "path": "src/components/primitives/message-scroller/use-message-scroller-refs.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/message-scroller/use-message-scroller-refs.ts"
+        },
+        {
+          "path": "src/components/primitives/message-scroller/utils.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/message-scroller/utils.ts"
+        },
+        {
+          "path": "src/components/primitives/use-render.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/use-render.ts"
+        }
+      ]
+    },
+    {
+      "name": "native-select",
+      "title": "Native Select",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/lucide"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/native-select.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "questionnaire",
+      "title": "Questionnaire",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/lucide"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/questionnaire.tsrx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/components/primitives/questionnaire/collection.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/questionnaire/collection.ts"
+        },
+        {
+          "path": "src/components/primitives/questionnaire/components.tsrx",
+          "type": "registry:lib",
+          "target": "components/primitives/questionnaire/components.tsrx"
+        },
+        {
+          "path": "src/components/primitives/questionnaire/context.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/questionnaire/context.ts"
+        },
+        {
+          "path": "src/components/primitives/questionnaire/index.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/questionnaire/index.ts"
+        },
+        {
+          "path": "src/components/primitives/questionnaire/types.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/questionnaire/types.ts"
+        },
+        {
+          "path": "src/components/primitives/questionnaire/use-questionnaire-choice.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/questionnaire/use-questionnaire-choice.ts"
+        },
+        {
+          "path": "src/components/primitives/questionnaire/use-questionnaire-input.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/questionnaire/use-questionnaire-input.ts"
+        },
+        {
+          "path": "src/components/primitives/questionnaire/use-questionnaire-item.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/questionnaire/use-questionnaire-item.ts"
+        },
+        {
+          "path": "src/components/primitives/questionnaire/use-questionnaire-root.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/questionnaire/use-questionnaire-root.ts"
+        },
+        {
+          "path": "src/components/primitives/questionnaire/utils.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/questionnaire/utils.ts"
+        },
+        {
+          "path": "src/components/primitives/use-render.ts",
+          "type": "registry:lib",
+          "target": "components/primitives/use-render.ts"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "title": "Spinner",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/lucide"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/spinner.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "title": "Toast",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui",
+        "@octanejs/lucide"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/nbutton.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/toast.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "title": "Toggle",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/toggle.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "title": "Toggle Group",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://neobrutalism.dev/r/ntoggle.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/toggle-group.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ntoggle",
+      "type": "registry:ui",
+      "dependencies": [
+        "@octanejs/base-ui",
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/toggle.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ntextarea",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/textarea.tsrx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "s1",
+      "title": "Star 1",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s1.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s1.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s2",
+      "title": "Star 2",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s2.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s2.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s3",
+      "title": "Star 3",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s3.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s3.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s4",
+      "title": "Star 4",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s4.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s4.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s5",
+      "title": "Star 5",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s5.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s5.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s6",
+      "title": "Star 6",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s6.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s6.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s7",
+      "title": "Star 7",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s7.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s7.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s8",
+      "title": "Star 8",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s8.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s8.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s9",
+      "title": "Star 9",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s9.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s9.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s10",
+      "title": "Star 10",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s10.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s10.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s11",
+      "title": "Star 11",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s11.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s11.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s12",
+      "title": "Star 12",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s12.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s12.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s13",
+      "title": "Star 13",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s13.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s13.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s14",
+      "title": "Star 14",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s14.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s14.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s15",
+      "title": "Star 15",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s15.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s15.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s16",
+      "title": "Star 16",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s16.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s16.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s17",
+      "title": "Star 17",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s17.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s17.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s18",
+      "title": "Star 18",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s18.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s18.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s19",
+      "title": "Star 19",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s19.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s19.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s20",
+      "title": "Star 20",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s20.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s20.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s21",
+      "title": "Star 21",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s21.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s21.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s22",
+      "title": "Star 22",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s22.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s22.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s23",
+      "title": "Star 23",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s23.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s23.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s24",
+      "title": "Star 24",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s24.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s24.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s25",
+      "title": "Star 25",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s25.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s25.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s26",
+      "title": "Star 26",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s26.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s26.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s27",
+      "title": "Star 27",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s27.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s27.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s28",
+      "title": "Star 28",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s28.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s28.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s29",
+      "title": "Star 29",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s29.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s29.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s30",
+      "title": "Star 30",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s30.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s30.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s31",
+      "title": "Star 31",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s31.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s31.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s32",
+      "title": "Star 32",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s32.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s32.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s33",
+      "title": "Star 33",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s33.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s33.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s34",
+      "title": "Star 34",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s34.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s34.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s35",
+      "title": "Star 35",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s35.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s35.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s36",
+      "title": "Star 36",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s36.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s36.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s37",
+      "title": "Star 37",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s37.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s37.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s38",
+      "title": "Star 38",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s38.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s38.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s39",
+      "title": "Star 39",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s39.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s39.tsrx"
+        }
+      ]
+    },
+    {
+      "name": "s40",
+      "title": "Star 40",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/components/stars/s40.tsrx",
+          "type": "registry:component",
+          "target": "components/stars/s40.tsrx"
+        }
+      ]
+    }
+  ]
+}

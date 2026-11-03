@@ -1,0 +1,17 @@
+import { Checkbox } from "@/components/ui/checkbox.tsrx"
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field.tsrx"
+
+export default function CheckboxDisabledDemo() @{
+  <FieldGroup class="mx-auto w-56">
+    <Field orientation="horizontal" data-disabled>
+      <Checkbox
+        id="toggle-checkbox-disabled"
+        name="toggle-checkbox-disabled"
+        disabled
+      />
+      <FieldLabel for="toggle-checkbox-disabled">
+        Enable notifications
+      </FieldLabel>
+    </Field>
+  </FieldGroup>
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "image-card",
+  "type": "registry:ui",
+  "title": "Image card",
+  "files": [
+    {
+      "path": "src/components/ui/image-card.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\ntype Props = {\n  imageUrl: string\n  caption: string\n} & ClassProps\n\nexport default function ImageCard({\n  imageUrl,\n  caption,\n  class: klass,\n  className,\n}: Props) @{\n  <figure\n    class={cn(\n      \"w-[250px] overflow-hidden rounded-base border-2 border-border bg-background font-base shadow-shadow\",\n      className,\n      klass,\n    )}\n  >\n    <img class=\"w-full aspect-4/3\" src={imageUrl} alt=\"image\" />\n    <figcaption class=\"border-t-2 text-foreground border-border p-4\">\n      {caption as string}\n    </figcaption>\n  </figure>\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

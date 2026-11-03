@@ -1,0 +1,111 @@
+---
+title: Date Picker
+description: A date picker component with calendar popup.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/date-picker
+---
+
+<ComponentPreview component="date-picker">
+  ```tsx file=<rootDir>/src/examples/ui/date-picker/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+The Date Picker is built using a composition of the `<Popover />` and the `<Calendar />` components.
+
+See installation instructions for the <Link href="/docs/popover">Popover</Link> and the <Link href="/docs/calendar">Calendar</Link> components.
+
+## Usage
+
+```ts
+import { format } from 'date-fns'
+import { Calendar as CalendarIcon } from '@octanejs/lucide'
+import { useState } from 'octane'
+
+import { Button } from '@/components/ui/button.tsrx'
+import { Calendar } from '@/components/ui/calendar.tsrx'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover.tsrx'
+```
+
+```tsx
+export function DatePickerDemo() @{
+  const [date, setDate] = useState<Date>()
+
+  <Popover>
+    <PopoverTrigger render={<Button variant="noShadow" class="w-[280px] justify-start text-left font-base" />}>
+      <CalendarIcon />
+      @if (date) {
+        {format(date, "PPP") as string}
+      } @else {
+        <span>Pick a date</span>
+      }
+    </PopoverTrigger>
+    <PopoverContent class="w-auto border-0! p-0">
+      <Calendar
+        mode="single"
+        selected={date}
+        onSelect={setDate}
+        autoFocus
+      />
+    </PopoverContent>
+  </Popover>
+}
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="date-picker" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/date-picker/index.tsrx
+  ```
+</ComponentPreview>
+
+### Basic
+
+A basic date picker component paired with a [Field](/docs/field) label.
+
+<ComponentPreview component="date-picker" example="basic">
+  ```tsx file=<rootDir>/src/examples/ui/date-picker/basic.tsrx
+  ```
+</ComponentPreview>
+
+### Range Picker
+
+A date picker component for selecting a range of dates.
+
+<ComponentPreview component="date-picker" example="range-picker">
+  ```tsx file=<rootDir>/src/examples/ui/date-picker/range-picker.tsrx
+  ```
+</ComponentPreview>
+
+### Date of Birth
+
+A date picker component for selecting a date of birth. This component uses `captionLayout="dropdown"` for month and year selection.
+
+<ComponentPreview component="date-picker" example="date-of-birth">
+  ```tsx file=<rootDir>/src/examples/ui/date-picker/date-of-birth.tsrx
+  ```
+</ComponentPreview>
+
+### Input
+
+A date picker component with an [Input Group](/docs/input-group) field for typing a date.
+
+<ComponentPreview component="date-picker" example="input">
+  ```tsx file=<rootDir>/src/examples/ui/date-picker/input.tsrx
+  ```
+</ComponentPreview>
+
+### Time Picker
+
+A date picker component with a time input field for selecting a time.
+
+<ComponentPreview component="date-picker" example="time-picker">
+  ```tsx file=<rootDir>/src/examples/ui/date-picker/time-picker.tsrx
+  ```
+</ComponentPreview>

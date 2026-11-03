@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card",
+  "type": "registry:ui",
+  "title": "Hover card",
+  "dependencies": [
+    "@octanejs/base-ui"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/hover-card.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { PreviewCard as HoverCardPrimitive } from \"@octanejs/base-ui/preview-card\"\n\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\ntype PartProps = Record<string, any> & ClassProps\n\nfunction HoverCard(props: HoverCardPrimitive.Root.Props) @{\n  <HoverCardPrimitive.Root data-slot=\"hover-card\" {...props} />\n}\n\nfunction HoverCardTrigger({ class: klass, className, ...props }: PartProps) @{\n  <HoverCardPrimitive.Trigger\n    data-slot=\"hover-card-trigger\"\n    className={cn(className, klass) || undefined}\n    {...props}\n  />\n}\n\ntype HoverCardContentProps = PartProps &\n  Pick<\n    HoverCardPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >\n\nfunction HoverCardContent({\n  class: klass,\n  className,\n  align = \"center\",\n  alignOffset = 0,\n  side = \"bottom\",\n  sideOffset = 4,\n  ...props\n}: HoverCardContentProps) @{\n  <HoverCardPrimitive.Portal>\n    <HoverCardPrimitive.Positioner\n      align={align}\n      alignOffset={alignOffset}\n      side={side}\n      sideOffset={sideOffset}\n      className=\"isolate z-50\"\n    >\n      <HoverCardPrimitive.Popup\n        data-slot=\"hover-card-content\"\n        className={cn(\n          \"z-50 w-64 rounded-base border-2 border-border bg-background p-4 font-base text-foreground outline-none origin-(--transform-origin) data-open:animate-in data-closed:animate-out data-closed:fade-out-0 data-open:fade-in-0 data-closed:zoom-out-95 data-open:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2\",\n          className,\n          klass,\n        )}\n        {...props}\n      />\n    </HoverCardPrimitive.Positioner>\n  </HoverCardPrimitive.Portal>\n}\n\nexport { HoverCard, HoverCardTrigger, HoverCardContent }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

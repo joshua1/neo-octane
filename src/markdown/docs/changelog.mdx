@@ -1,0 +1,12 @@
+---
+title: Changelog
+description: List of all important updates and announcements.
+---
+
+## October 2026
+
+- Ported every component, chart and star to <a target="_blank" href="https://octanejs.dev/">Octane</a>. Components are now `.tsrx` files and are imported with their extension (`@/components/ui/button.tsrx`).
+- Components follow the Octane port of shadcn/ui (`@octanejs/shadcn`) and are built on `@octanejs/base-ui`.
+- Icons, the calendar, charts, the data table, the resizable component, the command menu, the OTP input, the carousel and the form use the Octane bindings `@octanejs/lucide`, `@octanejs/day-picker`, `@octanejs/recharts`, `@octanejs/tanstack-table`, `@octanejs/resizable-panels`, `@octanejs/cmdk`, `@octanejs/input-otp`, `@octanejs/embla-carousel` and `@octanejs/hook-form`.
+- The form component validates with ArkType through a local resolver instead of zod and `@hookform/resolvers`.
+- The docs site now runs on TanStack Start with `@octanejs/tanstack-start`.

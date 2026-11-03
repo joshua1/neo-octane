@@ -1,0 +1,65 @@
+---
+title: Progress
+description: Displays an indicator showing the completion progress of a task.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/progress
+---
+
+<ComponentPreview component="progress">
+  ```tsx file=<rootDir>/src/examples/ui/progress/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="progress">
+  ```tsx file=<rootDir>/src/components/ui/progress.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { useEffect, useState } from 'octane'
+
+import { Progress } from '@/components/ui/progress.tsrx'
+```
+
+```tsx
+export function ProgressDemo() @{
+  const [progress, setProgress] = useState(13)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setProgress(66), 500)
+    return () => clearTimeout(timer)
+  }, [])
+
+  <Progress value={progress} class="w-[60%]" />
+}
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="progress" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/progress/index.tsrx
+  ```
+</ComponentPreview>
+
+### Label
+
+Use `ProgressLabel` and `ProgressValue` to add a label and value display.
+
+<ComponentPreview component="progress" example="label">
+  ```tsx file=<rootDir>/src/examples/ui/progress/label.tsrx
+  ```
+</ComponentPreview>
+
+### Controlled
+
+A progress bar that can be controlled by a [Slider](/docs/slider).
+
+<ComponentPreview component="progress" example="controlled">
+  ```tsx file=<rootDir>/src/examples/ui/progress/controlled.tsrx
+  ```
+</ComponentPreview>

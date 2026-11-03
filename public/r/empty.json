@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty",
+  "type": "registry:ui",
+  "title": "Empty",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/empty.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport type { OctaneNode } from \"octane\"\n\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\ntype DivProps = Record<string, any> &\n  ClassProps & {\n    children?: OctaneNode\n  }\n\nfunction Empty({ class: klass, className, ...props }: DivProps) @{\n  <div\n    data-slot=\"empty\"\n    class={cn(\n      \"flex w-full min-w-0 flex-1 flex-col items-center justify-center gap-4 rounded-base border-2 border-dashed border-border bg-background p-6 text-center font-base md:p-12 text-foreground text-balance\",\n      className,\n      klass,\n    )}\n    {...props}\n  />\n}\n\nfunction EmptyHeader({ class: klass, className, ...props }: DivProps) @{\n  <div\n    data-slot=\"empty-header\"\n    class={cn(\"flex max-w-sm flex-col items-center gap-2\", className, klass)}\n    {...props}\n  />\n}\n\nconst emptyMediaVariants = cva(\n  \"mb-2 flex shrink-0 items-center justify-center [&_svg]:pointer-events-none [&_svg]:shrink-0\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-transparent\",\n        icon: \"flex size-10 shrink-0 items-center justify-center rounded-base border-2 border-border bg-secondary-background text-foreground [&_svg:not([class*='size-'])]:size-5\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  },\n)\n\nfunction EmptyMedia({\n  class: klass,\n  className,\n  variant = \"default\",\n  ...props\n}: DivProps & VariantProps<typeof emptyMediaVariants>) @{\n  <div\n    data-slot=\"empty-icon\"\n    data-variant={variant}\n    class={cn(emptyMediaVariants({ variant }), className, klass)}\n    {...props}\n  />\n}\n\nfunction EmptyTitle({ class: klass, className, ...props }: DivProps) @{\n  <div\n    data-slot=\"empty-title\"\n    class={cn(\"font-heading text-sm tracking-tight\", className, klass)}\n    {...props}\n  />\n}\n\nfunction EmptyDescription({ class: klass, className, ...props }: DivProps) @{\n  <div\n    data-slot=\"empty-description\"\n    class={cn(\n      \"text-sm/relaxed font-base text-foreground [&>a]:underline [&>a]:underline-offset-4 [&>a:hover]:text-foreground\",\n      className,\n      klass,\n    )}\n    {...props}\n  />\n}\n\nfunction EmptyContent({ class: klass, className, ...props }: DivProps) @{\n  <div\n    data-slot=\"empty-content\"\n    class={cn(\n      \"flex w-full max-w-sm min-w-0 flex-col items-center gap-2.5 text-sm text-balance\",\n      className,\n      klass,\n    )}\n    {...props}\n  />\n}\n\nexport {\n  Empty,\n  EmptyHeader,\n  EmptyTitle,\n  EmptyDescription,\n  EmptyContent,\n  EmptyMedia,\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

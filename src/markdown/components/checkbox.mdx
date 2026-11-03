@@ -1,0 +1,90 @@
+---
+title: Checkbox
+description: A control that allows the user to toggle between checked and not checked.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/checkbox
+---
+
+<ComponentPreview component="checkbox">
+  ```tsx file=<rootDir>/src/examples/ui/checkbox/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="checkbox">
+  ```tsx file=<rootDir>/src/components/ui/checkbox.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { Checkbox } from '@/components/ui/checkbox.tsrx'
+```
+
+```tsx
+<Checkbox />
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="checkbox" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/checkbox/index.tsrx
+  ```
+</ComponentPreview>
+
+### Invalid State
+
+Set `aria-invalid` on the checkbox and `data-invalid` on the [Field](/docs/field) wrapper to show the invalid styles.
+
+<ComponentPreview component="checkbox" example="invalid-state">
+  ```tsx file=<rootDir>/src/examples/ui/checkbox/invalid-state.tsrx
+  ```
+</ComponentPreview>
+
+### Basic
+
+Pair the checkbox with `Field` and `FieldLabel` for proper layout and labeling.
+
+<ComponentPreview component="checkbox" example="basic">
+  ```tsx file=<rootDir>/src/examples/ui/checkbox/basic.tsrx
+  ```
+</ComponentPreview>
+
+### Description
+
+Use `FieldContent` and `FieldDescription` for helper text.
+
+<ComponentPreview component="checkbox" example="description">
+  ```tsx file=<rootDir>/src/examples/ui/checkbox/description.tsrx
+  ```
+</ComponentPreview>
+
+### Disabled
+
+Use the `disabled` prop to prevent interaction and add the `data-disabled` attribute to the `<Field>` component for disabled styles.
+
+<ComponentPreview component="checkbox" example="disabled">
+  ```tsx file=<rootDir>/src/examples/ui/checkbox/disabled.tsrx
+  ```
+</ComponentPreview>
+
+### Group
+
+Use multiple fields to create a checkbox list.
+
+<ComponentPreview component="checkbox" example="group">
+  ```tsx file=<rootDir>/src/examples/ui/checkbox/group.tsrx
+  ```
+</ComponentPreview>
+
+### Table
+
+Use checkboxes inside a [Table](/docs/table) to select rows.
+
+<ComponentPreview component="checkbox" example="table">
+  ```tsx file=<rootDir>/src/examples/ui/checkbox/table.tsrx
+  ```
+</ComponentPreview>

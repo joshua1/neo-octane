@@ -1,0 +1,85 @@
+---
+title: Select
+description: Displays a list of options for the user to pick from.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/select
+---
+
+<ComponentPreview component="select">
+  ```tsx file=<rootDir>/src/examples/ui/select/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="select">
+  ```tsx file=<rootDir>/src/components/ui/select.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select.tsrx'
+
+const fruits = [
+  { value: "apple", label: "Apple" },
+  { value: "banana", label: "Banana" },
+  { value: "blueberry", label: "Blueberry" },
+  { value: "grapes", label: "Grapes" },
+  { value: "pineapple", label: "Pineapple" },
+]
+```
+
+```tsx
+<Select items={fruits}>
+  <SelectTrigger class="w-[180px]">
+    <SelectValue placeholder="Select a fruit" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectGroup>
+      <SelectLabel>Fruits</SelectLabel>
+      @for (const fruit of fruits; key fruit.value) {
+        <SelectItem value={fruit.value}>{fruit.label as string}</SelectItem>
+      }
+    </SelectGroup>
+  </SelectContent>
+</Select>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="select" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/select/index.tsrx
+  ```
+</ComponentPreview>
+
+### Large List
+
+<ComponentPreview component="select" example="large-list">
+  ```tsx file=<rootDir>/src/examples/ui/select/large-list.tsrx
+  ```
+</ComponentPreview>
+
+### Disabled
+
+<ComponentPreview component="select" example="disabled">
+  ```tsx file=<rootDir>/src/examples/ui/select/disabled.tsrx
+  ```
+</ComponentPreview>
+
+### With Icon
+
+<ComponentPreview component="select" example="with-icon">
+  ```tsx file=<rootDir>/src/examples/ui/select/with-icon.tsrx
+  ```
+</ComponentPreview>

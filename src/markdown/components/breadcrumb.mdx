@@ -1,0 +1,127 @@
+---
+title: Breadcrumb
+description: Displays the current page location within a hierarchical structure.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/breadcrumb
+---
+
+<ComponentPreview component="breadcrumb">
+  ```tsx file=<rootDir>/src/examples/ui/breadcrumb/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="breadcrumb">
+  ```tsx file=<rootDir>/src/components/ui/breadcrumb.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { Link } from "@octanejs/tanstack-router"
+
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb.tsrx"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu.tsrx"
+```
+
+```tsx
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink render={<Link to="/" />}>Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <DropdownMenu>
+        <DropdownMenuTrigger class="flex items-center gap-1">
+          <BreadcrumbEllipsis class="size-4" />
+          <span class="sr-only">Toggle menu</span>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="start">
+          <DropdownMenuItem>Documentation</DropdownMenuItem>
+          <DropdownMenuItem>Themes</DropdownMenuItem>
+          <DropdownMenuItem>GitHub</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink render={<Link to="/docs/components" />}>
+        Components
+      </BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="breadcrumb" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/breadcrumb/index.tsrx
+  ```
+</ComponentPreview>
+
+### Basic
+
+A basic breadcrumb with a home link and a components link.
+
+<ComponentPreview component="breadcrumb" example="basic">
+  ```tsx file=<rootDir>/src/examples/ui/breadcrumb/basic.tsrx
+  ```
+</ComponentPreview>
+
+### Custom separator
+
+Use a custom component as `children` for `<BreadcrumbSeparator />` to create a custom separator.
+
+<ComponentPreview component="breadcrumb" example="custom-separator">
+  ```tsx file=<rootDir>/src/examples/ui/breadcrumb/custom-separator.tsrx
+  ```
+</ComponentPreview>
+
+### Dropdown
+
+You can compose `<BreadcrumbItem />` with a [Dropdown Menu](/docs/dropdown-menu) to create a dropdown in the breadcrumb.
+
+<ComponentPreview component="breadcrumb" example="dropdown">
+  ```tsx file=<rootDir>/src/examples/ui/breadcrumb/dropdown.tsrx
+  ```
+</ComponentPreview>
+
+### Collapsed
+
+We provide a `<BreadcrumbEllipsis />` component to show a collapsed state when the breadcrumb is too long.
+
+<ComponentPreview component="breadcrumb" example="collapsed">
+  ```tsx file=<rootDir>/src/examples/ui/breadcrumb/collapsed.tsrx
+  ```
+</ComponentPreview>
+
+### Link component
+
+To use a router link instead of a plain `<a>`, pass it to the `render` prop on `<BreadcrumbLink />`, for example `render={<Link to="/" />}` with `Link` from `@octanejs/tanstack-router`.
+
+<ComponentPreview component="breadcrumb" example="link-component">
+  ```tsx file=<rootDir>/src/examples/ui/breadcrumb/link-component.tsrx
+  ```
+</ComponentPreview>

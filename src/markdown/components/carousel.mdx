@@ -1,0 +1,194 @@
+---
+title: Carousel
+description: A carousel with motion and swipe built using Embla.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/carousel
+---
+
+<ComponentPreview component="carousel">
+  ```tsx file=<rootDir>/src/examples/ui/carousel/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="carousel">
+  ```tsx file=<rootDir>/src/components/ui/carousel.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { Card, CardContent } from "@/components/ui/card.tsrx"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel.tsrx"
+```
+
+```tsx
+<div class="w-full flex-col items-center gap-4 flex">
+  <Carousel class="w-full max-w-[200px]">
+    <CarouselContent>
+      @for (const index of Array.from({ length: 5 }, (_, i) => i); key index) {
+        <CarouselItem>
+          <div class="p-[10px]">
+            <Card class="shadow-none p-0 bg-main text-main-foreground">
+              <CardContent class="flex aspect-square items-center justify-center p-4">
+                <span class="text-3xl font-base">{String(index + 1)}</span>
+              </CardContent>
+            </Card>
+          </div>
+        </CarouselItem>
+      }
+    </CarouselContent>
+    <CarouselPrevious />
+    <CarouselNext />
+  </Carousel>
+</div>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="carousel" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/carousel/index.tsrx
+  ```
+</ComponentPreview>
+
+### Sizes
+
+To set the size of the items, you can use the `basis` utility class on the `<CarouselItem />`.
+
+<ComponentPreview component="carousel" example="sizes">
+  ```tsx file=<rootDir>/src/examples/ui/carousel/sizes.tsrx
+  ```
+</ComponentPreview>
+
+```tsx
+// 33% of the carousel width.
+<Carousel>
+  <CarouselContent>
+    <CarouselItem class="basis-1/3">...</CarouselItem>
+    <CarouselItem class="basis-1/3">...</CarouselItem>
+    <CarouselItem class="basis-1/3">...</CarouselItem>
+  </CarouselContent>
+</Carousel>
+```
+
+```tsx
+// 50% on small screens and 33% on larger screens.
+<Carousel>
+  <CarouselContent>
+    <CarouselItem class="md:basis-1/2 lg:basis-1/3">...</CarouselItem>
+    <CarouselItem class="md:basis-1/2 lg:basis-1/3">...</CarouselItem>
+    <CarouselItem class="md:basis-1/2 lg:basis-1/3">...</CarouselItem>
+  </CarouselContent>
+</Carousel>
+```
+
+### Spacing
+
+To set the spacing between the items, we use a `pl-[VALUE]` utility on the `<CarouselItem />` and a negative `-ml-[VALUE]` on the `<CarouselContent />`.
+
+<ComponentPreview component="carousel" example="spacing">
+  ```tsx file=<rootDir>/src/examples/ui/carousel/spacing.tsrx
+  ```
+</ComponentPreview>
+
+```tsx
+<Carousel>
+  <CarouselContent class="-ml-4">
+    <CarouselItem class="pl-4">...</CarouselItem>
+    <CarouselItem class="pl-4">...</CarouselItem>
+    <CarouselItem class="pl-4">...</CarouselItem>
+  </CarouselContent>
+</Carousel>
+```
+
+```tsx
+<Carousel>
+  <CarouselContent class="-ml-2 md:-ml-4">
+    <CarouselItem class="pl-2 md:pl-4">...</CarouselItem>
+    <CarouselItem class="pl-2 md:pl-4">...</CarouselItem>
+    <CarouselItem class="pl-2 md:pl-4">...</CarouselItem>
+  </CarouselContent>
+</Carousel>
+```
+
+### Orientation
+
+Use the `orientation` prop (`"horizontal"` or `"vertical"`) to set the orientation of the carousel.
+
+<ComponentPreview component="carousel" example="orientation">
+  ```tsx file=<rootDir>/src/examples/ui/carousel/orientation.tsrx
+  ```
+</ComponentPreview>
+
+```tsx
+<Carousel orientation="vertical">
+  <CarouselContent>
+    <CarouselItem>...</CarouselItem>
+    <CarouselItem>...</CarouselItem>
+    <CarouselItem>...</CarouselItem>
+  </CarouselContent>
+</Carousel>
+```
+
+### API
+
+Use a state and the `setApi` prop to get an instance of the carousel API.
+
+<ComponentPreview component="carousel" example="api">
+  ```tsx file=<rootDir>/src/examples/ui/carousel/api.tsrx
+  ```
+</ComponentPreview>
+
+```ts
+import { useEffect, useState } from "octane"
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel.tsrx"
+```
+
+```tsx
+export function CarouselApiDemo() @{
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
+
+  <div>
+    <Carousel setApi={setApi}>
+      <CarouselContent>
+        <CarouselItem>...</CarouselItem>
+        <CarouselItem>...</CarouselItem>
+        <CarouselItem>...</CarouselItem>
+      </CarouselContent>
+    </Carousel>
+    <div class="py-2 text-center text-sm">
+      {"Slide " + current + " of " + count}
+    </div>
+  </div>
+}
+```

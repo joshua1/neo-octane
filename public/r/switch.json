@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch",
+  "type": "registry:ui",
+  "title": "Switch",
+  "dependencies": [
+    "@octanejs/base-ui"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/switch.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { Switch as SwitchPrimitive } from \"@octanejs/base-ui/switch\"\n\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\ntype StyledProps<P> = Omit<P, \"className\"> & ClassProps\n\nfunction Switch({\n  class: klass,\n  className,\n  size = \"default\",\n  ...props\n}: StyledProps<SwitchPrimitive.Root.Props> & {\n  size?: \"sm\" | \"default\"\n}) @{\n  <SwitchPrimitive.Root\n    data-slot=\"switch\"\n    data-size={size}\n    className={cn(\n      \"peer inline-flex shrink-0 cursor-pointer items-center rounded-full border-2 border-border bg-secondary-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 data-disabled:cursor-not-allowed data-disabled:opacity-50 data-checked:bg-main data-unchecked:bg-secondary-background\",\n      size === \"default\" && \"h-6 w-12\",\n      size === \"sm\" && \"h-5 w-9\",\n      className,\n      klass,\n    )}\n    {...props}\n  >\n    <SwitchPrimitive.Thumb\n      data-slot=\"switch-thumb\"\n      className={cn(\n        \"pointer-events-none block rounded-full bg-white border-2 border-border ring-0 transition-transform data-unchecked:translate-x-1\",\n        size === \"default\" && \"h-4 w-4 data-checked:translate-x-6\",\n        size === \"sm\" && \"h-3 w-3 data-checked:translate-x-4\",\n      )}\n    />\n  </SwitchPrimitive.Root>\n}\n\nexport { Switch }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

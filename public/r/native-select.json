@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "native-select",
+  "type": "registry:ui",
+  "title": "Native Select",
+  "dependencies": [
+    "@octanejs/lucide"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/native-select.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { ChevronDownIcon } from \"@octanejs/lucide\"\n\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\ntype NativeSelectProps = Record<string, any> &\n  ClassProps & {\n    size?: \"sm\" | \"default\"\n  }\n\n// A real <select>: native `change` is the commit event for selects, so\n// consumer `onChange` handlers pass through unrenamed.\nfunction NativeSelect({\n  class: klass,\n  className,\n  size = \"default\",\n  ...props\n}: NativeSelectProps) @{\n  <div\n    class={cn(\n      \"group/native-select relative w-fit has-[select:disabled]:opacity-50\",\n      className,\n      klass,\n    )}\n    data-slot=\"native-select-wrapper\"\n    data-size={size}\n  >\n    <select\n      data-slot=\"native-select\"\n      data-size={size}\n      class=\"h-10 w-full min-w-0 appearance-none rounded-base border-2 border-border bg-secondary-background py-2 pr-9 pl-3 text-sm font-base text-foreground transition-colors outline-none select-none selection:bg-main selection:text-main-foreground placeholder:text-foreground/50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed data-[size=sm]:h-9 data-[size=sm]:py-1\"\n      {...props}\n    />\n    <ChevronDownIcon\n      class=\"pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-foreground select-none\"\n      aria-hidden=\"true\"\n      data-slot=\"native-select-icon\"\n    />\n  </div>\n}\n\ntype ElementProps = Record<string, any> & ClassProps\n\nfunction NativeSelectOption({\n  class: klass,\n  className,\n  ...props\n}: ElementProps) @{\n  <option\n    data-slot=\"native-select-option\"\n    class={cn(\"bg-[Canvas] text-[CanvasText]\", className, klass)}\n    {...props}\n  />\n}\n\nfunction NativeSelectOptGroup({\n  class: klass,\n  className,\n  ...props\n}: ElementProps) @{\n  <optgroup\n    data-slot=\"native-select-optgroup\"\n    class={cn(\"bg-[Canvas] text-[CanvasText]\", className, klass)}\n    {...props}\n  />\n}\n\nexport { NativeSelect, NativeSelectOptGroup, NativeSelectOption }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

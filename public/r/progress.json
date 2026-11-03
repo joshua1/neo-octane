@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress",
+  "type": "registry:ui",
+  "title": "Progress",
+  "dependencies": [
+    "@octanejs/base-ui"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/progress.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { Progress as ProgressPrimitive } from \"@octanejs/base-ui/progress\"\n\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\ntype StyledProps<P> = Omit<P, \"className\"> & ClassProps\n\nfunction Progress({\n  class: klass,\n  className,\n  children,\n  value,\n  ...props\n}: StyledProps<ProgressPrimitive.Root.Props>) @{\n  <ProgressPrimitive.Root\n    data-slot=\"progress\"\n    value={value}\n    className={cn(\"flex w-full flex-wrap gap-2\", className, klass)}\n    {...props}\n  >\n    {children}\n    <ProgressTrack>\n      <ProgressIndicator />\n    </ProgressTrack>\n  </ProgressPrimitive.Root>\n}\n\nfunction ProgressTrack({\n  class: klass,\n  className,\n  ...props\n}: StyledProps<ProgressPrimitive.Track.Props>) @{\n  <ProgressPrimitive.Track\n    data-slot=\"progress-track\"\n    className={cn(\n      \"relative h-4 w-full overflow-hidden rounded-base border-2 border-border bg-secondary-background\",\n      className,\n      klass,\n    )}\n    {...props}\n  />\n}\n\nfunction ProgressIndicator({\n  class: klass,\n  className,\n  ...props\n}: StyledProps<ProgressPrimitive.Indicator.Props>) @{\n  <ProgressPrimitive.Indicator\n    data-slot=\"progress-indicator\"\n    className={cn(\n      \"h-full border-r-2 border-border bg-main transition-all\",\n      className,\n      klass,\n    )}\n    {...props}\n  />\n}\n\nfunction ProgressLabel({\n  class: klass,\n  className,\n  ...props\n}: StyledProps<ProgressPrimitive.Label.Props>) @{\n  <ProgressPrimitive.Label\n    data-slot=\"progress-label\"\n    className={cn(\"text-sm font-heading text-foreground\", className, klass)}\n    {...props}\n  />\n}\n\nfunction ProgressValue({\n  class: klass,\n  className,\n  ...props\n}: StyledProps<ProgressPrimitive.Value.Props>) @{\n  <ProgressPrimitive.Value\n    data-slot=\"progress-value\"\n    className={cn(\n      \"ms-auto text-sm font-base text-foreground tabular-nums\",\n      className,\n      klass,\n    )}\n    {...props}\n  />\n}\n\nexport {\n  Progress,\n  ProgressTrack,\n  ProgressIndicator,\n  ProgressLabel,\n  ProgressValue,\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

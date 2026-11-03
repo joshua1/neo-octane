@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge",
+  "type": "registry:ui",
+  "title": "Badge",
+  "files": [
+    {
+      "path": "src/components/ui/badge.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { mergeProps } from \"@octanejs/base-ui/merge-props\"\nimport { useRender } from \"@octanejs/base-ui/use-render\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\nconst badgeVariants = cva(\n  \"inline-flex items-center justify-center rounded-base border-2 border-border px-2.5 py-0.5 text-xs font-base w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] overflow-hidden\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-background text-foreground\",\n        neutral: \"bg-secondary-background text-foreground\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  },\n)\n\nfunction Badge({\n  class: klass,\n  className,\n  variant,\n  render,\n  ...props\n}: useRender.ComponentProps<\"span\"> &\n  ClassProps &\n  VariantProps<typeof badgeVariants>) {\n  return useRender({\n    defaultTagName: \"span\",\n    // Binding typing gap: useRender.ComponentProps types `render` against HTMLProps while\n    // useRender.Parameters expects HTMLAttributes (style string vs object); runtime is identical.\n    render: render as any,\n    props: mergeProps<\"span\">(\n      {\n        className: cn(badgeVariants({ variant }), className, klass),\n      },\n      props,\n    ) as Record<string, unknown>,\n    state: {\n      slot: \"badge\",\n      variant: variant ?? \"default\",\n    },\n  })\n}\n\nexport { Badge, badgeVariants }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

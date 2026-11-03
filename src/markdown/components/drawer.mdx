@@ -1,0 +1,127 @@
+---
+title: Drawer
+description: A drawer component that slides out from the edge of the screen.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/drawer
+---
+
+<ComponentPreview component="drawer">
+  ```tsx file=<rootDir>/src/examples/ui/drawer/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="drawer">
+  ```tsx file=<rootDir>/src/components/ui/drawer.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { Button } from '@/components/ui/button.tsrx'
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@/components/ui/drawer.tsrx'
+```
+
+```tsx
+<Drawer>
+  <DrawerTrigger render={<Button />}>Open</DrawerTrigger>
+  <DrawerContent>
+    <div class="mx-auto w-[300px]">
+      <DrawerHeader>
+        <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+        <DrawerDescription>This action cannot be undone.</DrawerDescription>
+      </DrawerHeader>
+      <DrawerFooter class="grid grid-cols-2">
+        <Button variant="noShadow">Submit</Button>
+        <DrawerClose render={<Button class="bg-secondary-background text-foreground" variant="noShadow" />}>
+          Cancel
+        </DrawerClose>
+      </DrawerFooter>
+    </div>
+  </DrawerContent>
+</Drawer>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="drawer" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/drawer/index.tsrx
+  ```
+</ComponentPreview>
+
+### With Scrollable Content
+
+To make a region of the drawer scrollable, make the scroll container a flex item. Avoid `h-full`, which does not resolve inside a content-sized drawer.
+
+<ComponentPreview component="drawer" example="scrollable-content">
+  ```tsx file=<rootDir>/src/examples/ui/drawer/scrollable-content.tsrx
+  ```
+</ComponentPreview>
+
+### Position
+
+Use the `swipeDirection` prop to set the side of the drawer. Available options are `up`, `right`, `down`, and `left`.
+
+<ComponentPreview component="drawer" example="position">
+  ```tsx file=<rootDir>/src/examples/ui/drawer/position.tsrx
+  ```
+</ComponentPreview>
+
+### Swipe Handle
+
+Use `showSwipeHandle` on `Drawer` to render a swipe handle.
+
+<ComponentPreview component="drawer" example="swipe-handle">
+  ```tsx file=<rootDir>/src/examples/ui/drawer/swipe-handle.tsrx
+  ```
+</ComponentPreview>
+
+### Nested
+
+Open drawers from inside another drawer. Parent drawers stay mounted and stack behind the frontmost drawer.
+
+<ComponentPreview component="drawer" example="nested">
+  ```tsx file=<rootDir>/src/examples/ui/drawer/nested.tsrx
+  ```
+</ComponentPreview>
+
+### Non Modal
+
+Set `modal={false}` to allow interaction with the rest of the page while the drawer is open. Combine with `disablePointerDismissal` to prevent the drawer from closing on outside presses. Use `modal="trap-focus"` to keep focus inside the drawer while leaving scroll and pointer interaction unrestricted.
+
+<ComponentPreview component="drawer" example="non-modal">
+  ```tsx file=<rootDir>/src/examples/ui/drawer/non-modal.tsrx
+  ```
+</ComponentPreview>
+
+### Snap Points
+
+Use `snapPoints` to snap a drawer to preset heights. Numbers between `0` and `1` represent fractions of the viewport. Numbers greater than `1` are treated as pixel values. String values support `px` and `rem` units. Snap points apply to vertical drawers.
+
+Track the active snap point with the controlled `snapPoint` and `onSnapPointChange` props. At the full snap point, the drawer gets a `data-expanded` attribute you can style with the `data-expanded:` variant.
+
+<ComponentPreview component="drawer" example="snap-points">
+  ```tsx file=<rootDir>/src/examples/ui/drawer/snap-points.tsrx
+  ```
+</ComponentPreview>
+
+### Responsive
+
+You can combine the [Dialog](/docs/dialog) and `Drawer` components to create a responsive dialog. This renders a `Dialog` component on desktop and a `Drawer` on mobile.
+
+<ComponentPreview component="drawer" example="responsive">
+  ```tsx file=<rootDir>/src/examples/ui/drawer/responsive.tsrx
+  ```
+</ComponentPreview>

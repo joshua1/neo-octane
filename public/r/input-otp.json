@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp",
+  "type": "registry:ui",
+  "title": "Input OTP",
+  "dependencies": [
+    "@octanejs/input-otp"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/input-otp.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { useContext } from \"octane\"\nimport {\n  OTPInput,\n  OTPInputContext,\n  type OTPInputProps,\n} from \"@octanejs/input-otp\"\nimport { Dot } from \"@octanejs/lucide\"\n\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\nfunction InputOTP({\n  class: klass,\n  className,\n  containerClassName,\n  ...props\n}: OTPInputProps &\n  ClassProps & {\n    containerClassName?: string\n  }) @{\n  <OTPInput\n    data-slot=\"input-otp\"\n    containerClassName={cn(\n      \"flex items-center gap-2 has-disabled:opacity-50\",\n      containerClassName,\n    )}\n    class={cn(\"disabled:cursor-not-allowed\", className, klass)}\n    {...props}\n  />\n}\n\ntype DivProps = Record<string, any> & ClassProps\n\nfunction InputOTPGroup({ class: klass, className, ...props }: DivProps) @{\n  <div\n    data-slot=\"input-otp-group\"\n    class={cn(\"flex items-center\", className, klass)}\n    {...props}\n  />\n}\n\nfunction InputOTPSlot({\n  index,\n  class: klass,\n  className,\n  ...props\n}: DivProps & { index: number }) @{\n  const inputOTPContext = useContext(OTPInputContext)\n  const { char, hasFakeCaret, isActive } = inputOTPContext?.slots[index] ?? {}\n\n  <div\n    data-slot=\"input-otp-slot\"\n    data-active={isActive}\n    class={cn(\n      \"relative flex size-10 items-center justify-center border-y-2 border-r-2 border-border bg-secondary-background text-sm font-base text-foreground first:rounded-l-base first:border-l-2 last:rounded-r-base transition-all aria-invalid:border-red-500 aria-invalid:ring-red-500\",\n      isActive && \"z-10 ring-1 ring-ring\",\n      className,\n      klass,\n    )}\n    {...props}\n  >\n    {(char ?? \"\") as string}\n    @if (hasFakeCaret) {\n      <div class=\"pointer-events-none absolute inset-0 flex items-center justify-center\">\n        <div class=\"h-4 w-px animate-caret-blink bg-current duration-1000\" />\n      </div>\n    }\n  </div>\n}\n\nfunction InputOTPSeparator({ class: klass, className, ...props }: DivProps) @{\n  <div\n    data-slot=\"input-otp-separator\"\n    role=\"separator\"\n    class={cn(className, klass) || undefined}\n    {...props}\n  >\n    <Dot class=\"size-4\" />\n  </div>\n}\n\nexport { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

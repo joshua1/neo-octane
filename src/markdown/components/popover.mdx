@@ -1,0 +1,114 @@
+---
+title: Popover
+description: Displays floating content in relation to a target element.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/popover
+---
+
+<ComponentPreview component="popover">
+  ```tsx file=<rootDir>/src/examples/ui/popover/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="popover">
+  ```tsx file=<rootDir>/src/components/ui/popover.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { Button } from '@/components/ui/button.tsrx'
+import { Input } from '@/components/ui/input.tsrx'
+import { Label } from '@/components/ui/label.tsrx'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover.tsrx'
+```
+
+```tsx
+<Popover>
+  <PopoverTrigger render={<Button variant="noShadow" />}>Open popover</PopoverTrigger>
+  <PopoverContent class="w-80 text-main-foreground">
+    <div class="grid gap-4">
+      <div class="space-y-2">
+        <h4 class="font-heading leading-none">Dimensions</h4>
+        <p class="text-sm">Set the dimensions for the layer.</p>
+      </div>
+      <div class="grid gap-2">
+        <div class="grid grid-cols-3 items-center gap-4">
+          <Label for="width">Width</Label>
+          <Input
+            id="width"
+            defaultValue="100%"
+            class="col-span-2 h-8"
+          />
+        </div>
+        <div class="grid grid-cols-3 items-center gap-4">
+          <Label for="maxWidth">Max. width</Label>
+          <Input
+            id="maxWidth"
+            defaultValue="300px"
+            class="col-span-2 h-8"
+          />
+        </div>
+        <div class="grid grid-cols-3 items-center gap-4">
+          <Label for="height">Height</Label>
+          <Input
+            id="height"
+            defaultValue="25px"
+            class="col-span-2 h-8"
+          />
+        </div>
+        <div class="grid grid-cols-3 items-center gap-4">
+          <Label for="maxHeight">Max. height</Label>
+          <Input
+            id="maxHeight"
+            defaultValue="none"
+            class="col-span-2 h-8"
+          />
+        </div>
+      </div>
+    </div>
+  </PopoverContent>
+</Popover>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="popover" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/popover/index.tsrx
+  ```
+</ComponentPreview>
+
+### Basic
+
+A simple popover with a header, title, and description.
+
+<ComponentPreview component="popover" example="basic">
+  ```tsx file=<rootDir>/src/examples/ui/popover/basic.tsrx
+  ```
+</ComponentPreview>
+
+### Align
+
+Use the `align` prop on `PopoverContent` to control the horizontal alignment.
+
+<ComponentPreview component="popover" example="align">
+  ```tsx file=<rootDir>/src/examples/ui/popover/align.tsrx
+  ```
+</ComponentPreview>
+
+### With Form
+
+A popover with [Field](/docs/field) form fields inside.
+
+<ComponentPreview component="popover" example="with-form">
+  ```tsx file=<rootDir>/src/examples/ui/popover/with-form.tsrx
+  ```
+</ComponentPreview>

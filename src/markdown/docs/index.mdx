@@ -1,0 +1,76 @@
+---
+title: Introduction
+description: Neobrutalism-styled shadcn/ui components for Octane.
+---
+
+Neobrutalism components are a collection of neobrutalism-styled components for <a target="_blank" href="https://octanejs.dev/">Octane</a> and Tailwind v4.
+They are based on <a target="_blank" href="https://ui.shadcn.com/">shadcn/ui</a>, follow the Octane port of shadcn/ui (`@octanejs/shadcn`) and are built on <a target="_blank" href="https://base-ui.com/">Base UI</a> through its Octane binding, `@octanejs/base-ui`.
+
+Every component is an Octane `.tsrx` file. You install it into your project with the shadcn CLI or copy it by hand, and it becomes your code to change.
+
+## What is Octane?
+
+Octane is a compiler-first UI framework built around components and hooks. Components are written in `.tsrx`, a superset of TSX with template directives such as `@if` and `@for`. Hooks come from `octane`, events are native DOM events, and `ref` is an ordinary prop.
+
+<br />
+
+```ts
+import { useState } from "octane"
+
+import { Button } from "@/components/ui/button.tsrx"
+```
+
+```tsx
+export function Counter() @{
+  const [count, setCount] = useState(0)
+
+  <Button onClick={() => setCount(count + 1)}>{"Clicked " + count}</Button>
+}
+```
+
+If you are new to Octane, read <a target="_blank" href="https://octanejs.dev/docs/quick-start">the Octane docs</a> first. The template directives and native events matter when you edit a component.
+
+## Built on the Octane port of shadcn/ui
+
+`@octanejs/shadcn` ports shadcn/ui to Octane's hooks and native events and ships the same components on three primitive bases:
+
+<Table class="mt-8 mb-6">
+  <TableHeader>
+    <TableRow>
+      <TableHead>shadcn style</TableHead>
+      <TableHead>Primitives</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>base-nova (default)</TableCell>
+      <TableCell>@octanejs/base-ui</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>radix-nova</TableCell>
+      <TableCell>@octanejs/radix</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>aria-nova</TableCell>
+      <TableCell>@octanejs/aria</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+The neobrutalism components on this site use the Base UI variant. They keep the same component names, exports and `data-slot` attributes as the Base UI components in `@octanejs/shadcn`, so you can follow the <a target="_blank" href="https://ui.shadcn.com/docs">shadcn/ui docs</a> for the API and use components from either Octane shadcn base next to these ones. Only the styling differs.
+
+Components that need more than a primitive use the matching Octane binding: the calendar uses `@octanejs/day-picker`, the chart `@octanejs/recharts`, the command `@octanejs/cmdk`, the form `@octanejs/hook-form`, the data table `@octanejs/tanstack-table`, and icons come from `@octanejs/lucide`.
+
+## Neobrutalism
+
+Neobrutalism is a mix of regular brutalism in web design and more modern typography,
+illustration, and animation standards. Neobrutalism refuses the usual components
+of UX-UI design and embraces uncomfortable design elements, and it is more fearless
+to use distinctive color palettes.
+
+This collection exists for people who want to learn more about the neobrutalism
+style and get started with creating neobrutalism layouts in Octane.
+
+## Credits
+
+This is an Octane port of <a target="_blank" href="https://github.com/ekmas/neobrutalism-components">neobrutalism components</a> by <a target="_blank" href="https://samke.me">Samuel Breznjak</a>. The class strings, variants and palettes are the same, so the Figma file and styling options still apply.

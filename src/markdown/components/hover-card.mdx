@@ -1,0 +1,64 @@
+---
+title: Hover Card
+description: For sighted users to preview content available behind a link.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/hover-card
+---
+
+<ComponentPreview component="hover-card">
+  ```tsx file=<rootDir>/src/examples/ui/hover-card/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="hover-card">
+  ```tsx file=<rootDir>/src/components/ui/hover-card.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { Button } from '@/components/ui/button.tsrx'
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from '@/components/ui/hover-card.tsrx'
+```
+
+```tsx
+<HoverCard>
+  <HoverCardTrigger render={<Button variant="noShadow" />}>Hover</HoverCardTrigger>
+  <HoverCardContent>
+    The compiler-first UI framework.
+  </HoverCardContent>
+</HoverCard>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="hover-card" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/hover-card/index.tsrx
+  ```
+</ComponentPreview>
+
+### Basic
+
+Use `delay` and `closeDelay` on the trigger to control when the card opens and closes. `HoverCardTrigger` renders a link by default.
+
+<ComponentPreview component="hover-card" example="basic">
+  ```tsx file=<rootDir>/src/examples/ui/hover-card/basic.tsrx
+  ```
+</ComponentPreview>
+
+### Sides
+
+Use the `side` prop on `HoverCardContent` to control which side of the trigger the card appears on.
+
+<ComponentPreview component="hover-card" example="sides">
+  ```tsx file=<rootDir>/src/examples/ui/hover-card/sides.tsrx
+  ```
+</ComponentPreview>

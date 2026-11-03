@@ -1,0 +1,177 @@
+---
+title: Context Menu
+description: Displays a menu to the user — such as a set of actions or functions.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/context-menu
+---
+
+<ComponentPreview component="context-menu">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="context-menu">
+  ```tsx file=<rootDir>/src/components/ui/context-menu.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import {
+  ContextMenu,
+  ContextMenuCheckboxItem,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuTrigger,
+} from '@/components/ui/context-menu.tsrx'
+```
+
+```tsx
+<ContextMenu>
+  <ContextMenuTrigger class="flex h-[150px] w-[300px] items-center justify-center rounded-md border border-text border-dashed text-sm font-base">
+    Right click here
+  </ContextMenuTrigger>
+  <ContextMenuContent class="w-64">
+    <ContextMenuItem inset>
+      Back
+      <ContextMenuShortcut>⌘[</ContextMenuShortcut>
+    </ContextMenuItem>
+    <ContextMenuItem inset disabled>
+      Forward
+      <ContextMenuShortcut>⌘]</ContextMenuShortcut>
+    </ContextMenuItem>
+    <ContextMenuItem inset>
+      Reload
+      <ContextMenuShortcut>⌘R</ContextMenuShortcut>
+    </ContextMenuItem>
+    <ContextMenuSub>
+      <ContextMenuSubTrigger inset>More Tools</ContextMenuSubTrigger>
+      <ContextMenuSubContent class="w-48">
+        <ContextMenuItem>
+          Save Page As...
+          <ContextMenuShortcut>⇧⌘S</ContextMenuShortcut>
+        </ContextMenuItem>
+        <ContextMenuItem>Create Shortcut...</ContextMenuItem>
+        <ContextMenuItem>Name Window...</ContextMenuItem>
+        <ContextMenuSeparator />
+        <ContextMenuItem>Developer Tools</ContextMenuItem>
+      </ContextMenuSubContent>
+    </ContextMenuSub>
+    <ContextMenuSeparator />
+    <ContextMenuCheckboxItem checked>
+      Show Bookmarks Bar
+      <ContextMenuShortcut>⌘⇧B</ContextMenuShortcut>
+    </ContextMenuCheckboxItem>
+    <ContextMenuCheckboxItem>Show Full URLs</ContextMenuCheckboxItem>
+    <ContextMenuSeparator />
+    <ContextMenuRadioGroup value="pedro">
+      <ContextMenuLabel inset>People</ContextMenuLabel>
+      <ContextMenuSeparator />
+      <ContextMenuRadioItem value="pedro">
+        Pedro Duarte
+      </ContextMenuRadioItem>
+      <ContextMenuRadioItem value="colm">Colm Tuite</ContextMenuRadioItem>
+    </ContextMenuRadioGroup>
+  </ContextMenuContent>
+</ContextMenu>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="context-menu" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/index.tsrx
+  ```
+</ComponentPreview>
+
+### Basic
+
+A simple context menu with a few actions.
+
+<ComponentPreview component="context-menu" example="basic">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/basic.tsrx
+  ```
+</ComponentPreview>
+
+### Submenu
+
+Use `ContextMenuSub` to nest secondary actions.
+
+<ComponentPreview component="context-menu" example="submenu">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/submenu.tsrx
+  ```
+</ComponentPreview>
+
+### Shortcuts
+
+Add `ContextMenuShortcut` to show keyboard hints.
+
+<ComponentPreview component="context-menu" example="shortcuts">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/shortcuts.tsrx
+  ```
+</ComponentPreview>
+
+### Groups
+
+Group related actions and separate them with dividers.
+
+<ComponentPreview component="context-menu" example="groups">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/groups.tsrx
+  ```
+</ComponentPreview>
+
+### Icons
+
+Combine icons with labels for quick scanning.
+
+<ComponentPreview component="context-menu" example="icons">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/icons.tsrx
+  ```
+</ComponentPreview>
+
+### Checkboxes
+
+Use `ContextMenuCheckboxItem` for toggles.
+
+<ComponentPreview component="context-menu" example="checkboxes">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/checkboxes.tsrx
+  ```
+</ComponentPreview>
+
+### Radio
+
+Use `ContextMenuRadioItem` for exclusive choices.
+
+<ComponentPreview component="context-menu" example="radio">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/radio.tsrx
+  ```
+</ComponentPreview>
+
+### Destructive
+
+Use `variant="destructive"` to style the menu item as destructive.
+
+<ComponentPreview component="context-menu" example="destructive">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/destructive.tsrx
+  ```
+</ComponentPreview>
+
+### Sides
+
+Control menu placement with the `side` and `align` props.
+
+<ComponentPreview component="context-menu" example="sides">
+  ```tsx file=<rootDir>/src/examples/ui/context-menu/sides.tsrx
+  ```
+</ComponentPreview>

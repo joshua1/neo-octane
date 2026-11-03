@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marker",
+  "type": "registry:ui",
+  "title": "Marker",
+  "dependencies": [
+    "@octanejs/base-ui",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/marker.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { mergeProps } from \"@octanejs/base-ui/merge-props\"\nimport { useRender } from \"@octanejs/base-ui/use-render\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport type { OctaneNode } from \"octane\"\n\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\ntype SpanProps = Record<string, any> &\n  ClassProps & {\n    children?: OctaneNode\n  }\n\nconst markerVariants = cva(\n  \"group/marker relative flex min-h-4 w-full items-center gap-2 text-left text-sm font-base text-foreground [&_svg:not([class*='size-'])]:size-4 [a]:underline [a]:underline-offset-3 [a]:hover:text-foreground\",\n  {\n    variants: {\n      variant: {\n        default: \"\",\n        separator:\n          \"before:mr-0 before:h-0.5 before:min-w-0 before:flex-1 before:bg-border after:ml-0 after:h-0.5 after:min-w-0 after:flex-1 after:bg-border\",\n        border: \"border-b-2 border-border pb-2\",\n      },\n    },\n  },\n)\n\nfunction Marker({\n  class: klass,\n  className,\n  variant = \"default\",\n  render,\n  ...props\n}: Omit<useRender.ComponentProps<\"div\">, \"className\"> &\n  ClassProps &\n  VariantProps<typeof markerVariants>) {\n  return useRender({\n    defaultTagName: \"div\",\n    props: mergeProps<\"div\">(\n      {\n        className: cn(markerVariants({ variant }), className, klass),\n      },\n      props,\n    ) as Record<string, unknown>,\n    // Binding typing gap: useRender.ComponentProps types `render` against HTMLProps while\n    // useRender.Parameters expects HTMLAttributes (style string vs object); runtime is identical.\n    render: render as any,\n    state: {\n      slot: \"marker\",\n      variant,\n    },\n  })\n}\n\nfunction MarkerIcon({ class: klass, className, ...props }: SpanProps) @{\n  <span\n    data-slot=\"marker-icon\"\n    aria-hidden=\"true\"\n    class={cn(\n      \"size-4 shrink-0 [&_svg:not([class*='size-'])]:size-4\",\n      className,\n      klass,\n    )}\n    {...props}\n  />\n}\n\nfunction MarkerContent({ class: klass, className, ...props }: SpanProps) @{\n  <span\n    data-slot=\"marker-content\"\n    class={cn(\n      \"min-w-0 wrap-break-word group-data-[variant=separator]/marker:flex-none group-data-[variant=separator]/marker:text-center *:[a]:underline *:[a]:underline-offset-3 *:[a]:hover:text-foreground\",\n      className,\n      klass,\n    )}\n    {...props}\n  />\n}\n\nexport { Marker, MarkerIcon, MarkerContent, markerVariants }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

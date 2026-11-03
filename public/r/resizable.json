@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable",
+  "type": "registry:ui",
+  "title": "Resizable",
+  "dependencies": [
+    "@octanejs/resizable-panels"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/resizable.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { GripVertical } from \"@octanejs/lucide\"\nimport * as ResizablePrimitive from \"@octanejs/resizable-panels\"\n\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\ntype StyledProps<P> = Omit<P, \"className\"> & ClassProps\n\nfunction ResizablePanelGroup({\n  class: klass,\n  className,\n  ...props\n}: StyledProps<ResizablePrimitive.GroupProps>) @{\n  <ResizablePrimitive.Group\n    data-slot=\"resizable-panel-group\"\n    className={cn(\n      \"flex h-full w-full font-base aria-[orientation=vertical]:flex-col\",\n      className,\n      klass,\n    )}\n    {...props}\n  />\n}\n\nfunction ResizablePanel({\n  class: klass,\n  className,\n  ...props\n}: StyledProps<ResizablePrimitive.PanelProps>) @{\n  <ResizablePrimitive.Panel\n    data-slot=\"resizable-panel\"\n    className={cn(className, klass) || undefined}\n    {...props}\n  />\n}\n\nfunction ResizableHandle({\n  withHandle,\n  class: klass,\n  className,\n  ...props\n}: StyledProps<ResizablePrimitive.SeparatorProps> & {\n  withHandle?: boolean\n}) @{\n  <ResizablePrimitive.Separator\n    data-slot=\"resizable-handle\"\n    className={cn(\n      \"relative flex w-0.5 items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black focus-visible:ring-offset-1 aria-[orientation=horizontal]:h-0.5 aria-[orientation=horizontal]:w-full aria-[orientation=horizontal]:after:left-0 aria-[orientation=horizontal]:after:h-1 aria-[orientation=horizontal]:after:w-full aria-[orientation=horizontal]:after:-translate-y-1/2 aria-[orientation=horizontal]:after:translate-x-0 [&[aria-orientation=horizontal]>div]:rotate-90\",\n      className,\n      klass,\n    )}\n    {...props}\n  >\n    @if (withHandle) {\n      <div class=\"z-10 flex h-4 w-3 items-center justify-center rounded-base border bg-border\">\n        <GripVertical class=\"size-2.5\" />\n      </div>\n    }\n  </ResizablePrimitive.Separator>\n}\n\nexport { ResizablePanelGroup, ResizablePanel, ResizableHandle }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

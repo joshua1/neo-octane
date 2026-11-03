@@ -1,0 +1,11 @@
+node_modules
+dist
+.output
+.nitro
+.tanstack
+.vinxi
+*.local
+.DS_Store
+
+# Local Claude Code permissions (machine-specific paths)
+.claude/

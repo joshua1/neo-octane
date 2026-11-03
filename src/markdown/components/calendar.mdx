@@ -1,0 +1,56 @@
+---
+title: Calendar
+description: A date field component that allows users to enter and edit date.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/calendar
+---
+
+<ComponentPreview component="calendar" >
+  ```tsx file=<rootDir>/src/examples/ui/calendar/index.tsrx
+  ```
+</ComponentPreview>
+
+
+## Installation
+
+<Installation component="calendar">
+  ```tsx file=<rootDir>/src/components/ui/calendar.tsrx
+  ```
+</Installation>
+
+## About
+
+The calendar is built on top of `@octanejs/day-picker`, the Octane port of <a target="_blank" href="https://daypicker.dev/">DayPicker</a> v9. Check out the DayPicker docs for all the available props like `captionLayout`, `numberOfMonths`, `disabled` and `locale`.
+
+If you are upgrading from DayPicker v8, replace the `initialFocus` prop with `autoFocus` and rename any custom `classNames` keys to their v9 names (`day_selected` is now `selected`, `nav_button` is now `button_previous` / `button_next` and so on).
+
+## Usage
+
+```ts
+import { useState } from 'octane'
+
+import { Calendar } from '@/components/ui/calendar.tsrx'
+```
+
+```tsx
+export function CalendarDemo() @{
+  const [date, setDate] = useState<Date | undefined>(new Date())
+
+  <Calendar mode="single" selected={date} onSelect={setDate} />
+}
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="calendar">
+  ```tsx file=<rootDir>/src/examples/ui/calendar/index.tsrx
+  ```
+</ComponentPreview>
+
+### Range
+
+<ComponentPreview component="calendar" example="range">
+  ```tsx file=<rootDir>/src/examples/ui/calendar/range.tsrx
+  ```
+</ComponentPreview>

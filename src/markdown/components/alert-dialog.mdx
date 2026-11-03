@@ -1,0 +1,107 @@
+---
+title: Alert Dialog
+description: A modal dialog that interrupts the user with important content and expects a response.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/alert-dialog
+---
+
+<ComponentPreview component="alert-dialog">
+  ```tsx file=<rootDir>/src/examples/ui/alert-dialog/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="alert-dialog">
+  ```tsx file=<rootDir>/src/components/ui/alert-dialog.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog.tsrx'
+import { Button } from '@/components/ui/button.tsrx'
+```
+
+```tsx
+<AlertDialog>
+  <AlertDialogTrigger render={<Button />}>Open</AlertDialogTrigger>
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+      <AlertDialogDescription>
+        This action cannot be undone. This will permanently delete your
+        account and remove your data from our servers.
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogCancel>Cancel</AlertDialogCancel>
+      <AlertDialogAction>Continue</AlertDialogAction>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="alert-dialog" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/alert-dialog/index.tsrx
+  ```
+</ComponentPreview>
+
+### Basic
+
+A basic alert dialog with a title, description, and cancel and continue buttons.
+
+<ComponentPreview component="alert-dialog" example="basic">
+  ```tsx file=<rootDir>/src/examples/ui/alert-dialog/basic.tsrx
+  ```
+</ComponentPreview>
+
+### Small
+
+Use the `size="sm"` prop on `AlertDialogContent` to make the alert dialog smaller.
+
+<ComponentPreview component="alert-dialog" example="small">
+  ```tsx file=<rootDir>/src/examples/ui/alert-dialog/small.tsrx
+  ```
+</ComponentPreview>
+
+### Media
+
+Use the `AlertDialogMedia` component to add a media element such as an icon or image to the alert dialog.
+
+<ComponentPreview component="alert-dialog" example="media">
+  ```tsx file=<rootDir>/src/examples/ui/alert-dialog/media.tsrx
+  ```
+</ComponentPreview>
+
+### Small with Media
+
+Use the `size="sm"` prop to make the alert dialog smaller and the `AlertDialogMedia` component to add a media element such as an icon or image to the alert dialog.
+
+<ComponentPreview component="alert-dialog" example="small-with-media">
+  ```tsx file=<rootDir>/src/examples/ui/alert-dialog/small-with-media.tsrx
+  ```
+</ComponentPreview>
+
+### Destructive
+
+Use the `AlertDialogAction` component for the destructive action. There is no destructive button variant in this style, so pass a `class` to `AlertDialogMedia` to give the icon a warning treatment.
+
+<ComponentPreview component="alert-dialog" example="destructive">
+  ```tsx file=<rootDir>/src/examples/ui/alert-dialog/destructive.tsrx
+  ```
+</ComponentPreview>

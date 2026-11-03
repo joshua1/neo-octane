@@ -1,0 +1,64 @@
+---
+title: Kbd
+description: Used to display textual user input from keyboard.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/kbd
+---
+
+<ComponentPreview component="kbd">
+  ```tsx file=<rootDir>/src/examples/ui/kbd/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="kbd">
+  ```tsx file=<rootDir>/src/components/ui/kbd.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import { Kbd, KbdGroup } from '@/components/ui/kbd.tsrx'
+```
+
+```tsx
+<Kbd>⌘</Kbd>
+```
+
+```tsx
+<KbdGroup>
+  <Kbd>Ctrl</Kbd>
+  <Kbd>K</Kbd>
+</KbdGroup>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="kbd" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/kbd/index.tsrx
+  ```
+</ComponentPreview>
+
+### Group
+
+<ComponentPreview component="kbd" example="group">
+  ```tsx file=<rootDir>/src/examples/ui/kbd/group.tsrx
+  ```
+</ComponentPreview>
+
+### With Icon
+
+<ComponentPreview component="kbd" example="with-icon">
+  ```tsx file=<rootDir>/src/examples/ui/kbd/with-icon.tsrx
+  ```
+</ComponentPreview>
+
+### In Tooltip
+
+<ComponentPreview component="kbd" example="in-tooltip">
+  ```tsx file=<rootDir>/src/examples/ui/kbd/in-tooltip.tsrx
+  ```
+</ComponentPreview>

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "direction",
+  "type": "registry:ui",
+  "title": "Direction",
+  "dependencies": [
+    "@octanejs/base-ui"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/direction.tsrx",
+      "content": "export {\n  DirectionProvider,\n  useDirection,\n} from \"@octanejs/base-ui/direction-provider\"\n",
+      "type": "registry:ui"
+    }
+  ]
+}

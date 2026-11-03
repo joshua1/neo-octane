@@ -1,0 +1,87 @@
+---
+title: Pagination
+description: Displays page numbers and controls for navigating paginated data.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/pagination
+---
+
+<ComponentPreview component="pagination">
+  ```tsx file=<rootDir>/src/examples/ui/pagination/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="pagination">
+  ```tsx file=<rootDir>/src/components/ui/pagination.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination.tsrx'
+```
+
+```tsx
+<Pagination>
+  <PaginationContent>
+    <PaginationItem>
+      <PaginationPrevious href="#" />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#">1</PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#" isActive>
+        2
+      </PaginationLink>
+    </PaginationItem>
+    <div class="items-center md:flex hidden">
+      <PaginationItem>
+        <PaginationLink href="#">3</PaginationLink>
+      </PaginationItem>
+      <PaginationItem>
+        <PaginationEllipsis />
+      </PaginationItem>
+    </div>
+    <PaginationItem>
+      <PaginationNext href="#" />
+    </PaginationItem>
+  </PaginationContent>
+</Pagination>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="pagination" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/pagination/index.tsrx
+  ```
+</ComponentPreview>
+
+### Simple
+
+A simple pagination with only page numbers.
+
+<ComponentPreview component="pagination" example="simple">
+  ```tsx file=<rootDir>/src/examples/ui/pagination/simple.tsrx
+  ```
+</ComponentPreview>
+
+### Icons Only
+
+Use just the previous and next buttons without page numbers. This is useful for data tables with a rows per page selector.
+
+<ComponentPreview component="pagination" example="icons-only">
+  ```tsx file=<rootDir>/src/examples/ui/pagination/icons-only.tsrx
+  ```
+</ComponentPreview>

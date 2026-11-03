@@ -1,0 +1,97 @@
+---
+title: Installation
+description: Learn how to install neobrutalism components in an Octane project.
+---
+
+## 1. Set up an Octane project
+
+The components are Octane `.tsrx` files styled with Tailwind v4. If you don't have an Octane project yet, create one:
+
+<br />
+
+```bash
+pnpm create octane my-app
+```
+
+To add Octane to an existing Vite project instead, run `pnpm dlx @octanejs/cli init`. See the <a target="_blank" href="https://octanejs.dev/docs/quick-start">Octane quick start</a> for other build tools and for server rendering.
+
+Then make sure that:
+
+- <a target="_blank" href="https://tailwindcss.com/docs/installation/using-vite">Tailwind v4</a> is installed and imported in your main CSS file.
+- The `@/*` path alias points to your source folder in `tsconfig.json` and your bundler.
+- `allowImportingTsExtensions` is enabled in `tsconfig.json`. Components import each other with the extension, for example `@/components/ui/button.tsrx`.
+
+## 2. Add the styling
+
+Every palette on the <Link href="/styling">styling page</Link> is published as a registry style, so the shadcn CLI can set up a project with it in one command.
+
+### New project
+
+Initialize the project with a palette. This creates `components.json`, writes the palette and every token the components depend on to your CSS file, adds `lib/utils.ts`, installs the dependencies and adds the Button component:
+
+<ShadcnCliCommand command="init" url="/r/styling/blue.json" />
+
+### Existing project
+
+If you already initialized shadcn, add the styling to the project instead. This merges the palette and tokens into your CSS file:
+
+<ShadcnCliCommand command="add" url="/r/styling/blue.json" />
+
+### Manually
+
+Delete the existing styling from your CSS file and paste the CSS from the Manual tab of the Copy dialog on the <Link href="/styling">styling page</Link>. Unlike the CLI commands, that CSS already carries your border radius, box shadow and font weight choices.
+
+## 3. Change the font
+
+Pick a font from the <Link href="/styling">styling page</Link> and load it in your project like any other Google font.
+
+## 4. Set up portals
+
+The components are built on `@octanejs/base-ui`, which renders popups (dialogs, menus, tooltips...) through portals. To keep them above the rest of your page, add `isolate` to the element that wraps your app. In a TanStack Start app that is the `Body` in your root route:
+
+<br />
+
+```tsx
+function RootDocument({ children }: { children?: OctaneNode }) @{
+  <Html lang="en">
+    <Head>
+      <HeadContent />
+    </Head>
+    <Body class="isolate">
+      {children}
+      <Scripts />
+    </Body>
+  </Html>
+}
+```
+
+## 5. Install components
+
+### Install via Shadcn CLI
+
+On each component page choose your package manager, copy the CLI command to your terminal and you're good to go. The CLI writes the component to `components/ui/<name>.tsrx` (or your custom component path) and installs the Octane packages it needs, such as `@octanejs/base-ui` or `@octanejs/lucide`. If a component page has no CLI command, install the component manually.
+
+### Install manually
+
+Open the Manual tab on a component page and copy the component into your project as `components/ui/<name>.tsrx`. Then install the packages it imports. Most components only need `@octanejs/base-ui`, `class-variance-authority` and the `cn` helper from `lib/utils.ts`:
+
+<br />
+
+```bash
+pnpm add @octanejs/base-ui class-variance-authority clsx tailwind-merge
+```
+
+```ts
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+```
+
+If a component depends on other components, the page says so. Install those first.
+
+### Using the shadcn/ui docs
+
+Below each component's name there's a link to its shadcn/ui docs. The neobrutalism components keep the shadcn/ui Base UI API, so those docs are a good reference for props and composition. Keep in mind that the shadcn docs examples are not written for Octane, so translate them to Octane (`@if`/`@for`, `onInput` for text fields, imports from `octane`), and that neobrutalism components can have different variants than the default shadcn components.

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marquee",
+  "type": "registry:ui",
+  "title": "Marquee",
+  "files": [
+    {
+      "path": "src/components/ui/marquee.tsrx",
+      "content": "export default function Marquee({ items }: { items: string[] }) @{\n  <div class=\"relative flex w-full overflow-x-hidden border-b-2 border-t-2 border-border bg-secondary-background text-foreground font-base\">\n    <div class=\"animate-marquee whitespace-nowrap py-12\">\n      @for (const item of items; key item) {\n        <span class=\"mx-4 text-4xl\">{item as string}</span>\n      }\n    </div>\n\n    <div class=\"absolute top-0 animate-marquee2 whitespace-nowrap py-12\">\n      @for (const item of items; key item) {\n        <span class=\"mx-4 text-4xl\">{item as string}</span>\n      }\n    </div>\n\n    {/* must have both of these in order to work */}\n  </div>\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "docs": "Make sure there is enough content in `items` so it loops perfectly. Visit https://jackwhiting.co.uk/posts/creating-a-marquee-with-tailwind to learn more."
+}

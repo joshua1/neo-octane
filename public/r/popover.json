@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover",
+  "type": "registry:ui",
+  "title": "Popover",
+  "dependencies": [
+    "@octanejs/base-ui"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/popover.tsrx",
+      "content": "import type { ClassValue } from \"clsx\"\nimport { type OctaneNode } from \"octane\"\nimport { Popover as PopoverPrimitive } from \"@octanejs/base-ui/popover\"\n\nimport { cn } from \"@/lib/utils\"\n\n// Octane takes `class`; `className` is what base-ui hands to an element\n// passed as `render={…}`, so components fold in both.\ntype ClassProps = { class?: ClassValue; className?: string }\n\ntype DivProps = Record<string, any> &\n  ClassProps & {\n    children?: OctaneNode\n  }\n\ntype PartProps = Record<string, any> & ClassProps\n\nfunction Popover(props: PopoverPrimitive.Root.Props) @{\n  <PopoverPrimitive.Root data-slot=\"popover\" {...props} />\n}\n\nfunction PopoverTrigger({ class: klass, className, ...props }: PartProps) @{\n  <PopoverPrimitive.Trigger\n    data-slot=\"popover-trigger\"\n    className={cn(className, klass) || undefined}\n    {...props}\n  />\n}\n\ntype PopoverContentProps = PartProps &\n  Pick<\n    PopoverPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >\n\nfunction PopoverContent({\n  class: klass,\n  className,\n  align = \"center\",\n  alignOffset = 0,\n  side = \"bottom\",\n  sideOffset = 4,\n  ...props\n}: PopoverContentProps) @{\n  <PopoverPrimitive.Portal>\n    <PopoverPrimitive.Positioner\n      align={align}\n      alignOffset={alignOffset}\n      side={side}\n      sideOffset={sideOffset}\n      className=\"isolate z-50\"\n    >\n      <PopoverPrimitive.Popup\n        data-slot=\"popover-content\"\n        className={cn(\n          \"z-50 flex w-72 flex-col gap-4 rounded-base border-2 border-border bg-background p-4 text-foreground outline-none origin-(--transform-origin) data-open:animate-in data-closed:animate-out data-closed:fade-out-0 data-open:fade-in-0 data-closed:zoom-out-95 data-open:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2\",\n          className,\n          klass,\n        )}\n        {...props}\n      />\n    </PopoverPrimitive.Positioner>\n  </PopoverPrimitive.Portal>\n}\n\nfunction PopoverHeader({ class: klass, className, ...props }: DivProps) @{\n  <div\n    data-slot=\"popover-header\"\n    class={cn(\"flex flex-col gap-1\", className, klass)}\n    {...props}\n  />\n}\n\nfunction PopoverTitle({ class: klass, className, ...props }: PartProps) @{\n  <PopoverPrimitive.Title\n    data-slot=\"popover-title\"\n    className={cn(\"font-heading leading-none\", className, klass)}\n    {...props}\n  />\n}\n\nfunction PopoverDescription({ class: klass, className, ...props }: PartProps) @{\n  <PopoverPrimitive.Description\n    data-slot=\"popover-description\"\n    className={cn(\"text-sm font-base text-foreground\", className, klass)}\n    {...props}\n  />\n}\n\nexport {\n  Popover,\n  PopoverTrigger,\n  PopoverContent,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverDescription,\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

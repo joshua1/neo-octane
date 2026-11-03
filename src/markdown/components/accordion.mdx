@@ -1,0 +1,75 @@
+---
+title: Accordion
+description: A vertically stacked set of interactive headings that each reveal a section of content.
+shadcnDocsLink: https://ui.shadcn.com/docs/components/accordion
+---
+
+<ComponentPreview component="accordion">
+  ```tsx file=<rootDir>/src/examples/ui/accordion/index.tsrx
+  ```
+</ComponentPreview>
+
+## Installation
+
+<Installation component="accordion">
+  ```tsx file=<rootDir>/src/components/ui/accordion.tsrx
+  ```
+</Installation>
+
+## Usage
+
+```ts
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion.tsrx"
+```
+
+```tsx
+<Accordion class="w-full max-w-xl">
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview component="accordion" example="default">
+  ```tsx file=<rootDir>/src/examples/ui/accordion/index.tsrx
+  ```
+</ComponentPreview>
+
+### Basic
+
+A basic accordion that shows one item at a time. The first item is open by default.
+
+<ComponentPreview component="accordion" example="basic">
+  ```tsx file=<rootDir>/src/examples/ui/accordion/basic.tsrx
+  ```
+</ComponentPreview>
+
+### Multiple
+
+Use the `multiple` prop to allow multiple items to be open at the same time.
+
+<ComponentPreview component="accordion" example="multiple">
+  ```tsx file=<rootDir>/src/examples/ui/accordion/multiple.tsrx
+  ```
+</ComponentPreview>
+
+### Disabled
+
+Use the `disabled` prop on `AccordionItem` to disable individual items.
+
+<ComponentPreview component="accordion" example="disabled">
+  ```tsx file=<rootDir>/src/examples/ui/accordion/disabled.tsrx
+  ```
+</ComponentPreview>
