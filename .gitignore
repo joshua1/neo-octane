@@ -9,3 +9,6 @@ dist
 
 # Local Claude Code permissions (machine-specific paths)
 .claude/
+
+# Personal notes
+/note.md
