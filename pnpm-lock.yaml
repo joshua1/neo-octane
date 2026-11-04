@@ -7,6 +7,11 @@ settings:
 overrides:
   rolldown: 1.2.3
 
+patchedDependencies:
+  '@octanejs/recharts@0.1.58':
+    hash: uscmieyfa244kdsxzkyco4uyxi
+    path: patches/@octanejs__recharts@0.1.58.patch
+
 importers:
 
   .:
@@ -37,7 +42,7 @@ importers:
         version: 0.1.56(octane@0.8.0(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))
       '@octanejs/recharts':
         specifier: ^0.1.58
-        version: 0.1.58(octane@0.8.0(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(redux@5.0.1)
+        version: 0.1.58(patch_hash=uscmieyfa244kdsxzkyco4uyxi)(octane@0.8.0(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(redux@5.0.1)
       '@octanejs/resizable-panels':
         specifier: ^0.0.17
         version: 0.0.17(octane@0.8.0(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))
@@ -3635,7 +3640,7 @@ snapshots:
       aria-hidden: 1.2.6
       octane: 0.8.0(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
-  '@octanejs/recharts@0.1.58(octane@0.8.0(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(redux@5.0.1)':
+  '@octanejs/recharts@0.1.58(patch_hash=uscmieyfa244kdsxzkyco4uyxi)(octane@0.8.0(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(redux@5.0.1)':
     dependencies:
       '@octanejs/redux': 0.1.56(octane@0.8.0(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(redux@5.0.1)
       '@reduxjs/toolkit': 2.10.1

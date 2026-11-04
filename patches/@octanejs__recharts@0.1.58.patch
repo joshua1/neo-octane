@@ -1,0 +1,15 @@
+diff --git a/src/container/ClipPathProvider.tsrx b/src/container/ClipPathProvider.tsrx
+index 3ab205ab6fc8693bda803f42168d0326cec9706e..9bb15fd00735db445a49fa8431f79d9fb164323f 100644
+--- a/src/container/ClipPathProvider.tsrx
++++ b/src/container/ClipPathProvider.tsrx
+@@ -31,3 +31,10 @@ export function ClipPathProvider(props: {
+ export const useClipPathId = () => {
+ 	return useContext(ClipPathIdContext);
+ };
++
++// Exported so octane 0.8's production compiler doesn't treat the context as
++// private: it would create it with __createCompiledContext, whose provider
++// calls `children` as a function, but the early `return null` above lowers
++// the provider's children to an element array, so every chart threw
++// "e is not a function". The public provider renders both forms.
++export { ClipPathIdContext };

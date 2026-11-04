@@ -65,6 +65,9 @@
   "pnpm": {
     "overrides": {
       "rolldown": "1.2.3"
+    },
+    "patchedDependencies": {
+      "@octanejs/recharts@0.1.58": "patches/@octanejs__recharts@0.1.58.patch"
     }
   },
   "packageManager": "pnpm@9.6.0",
