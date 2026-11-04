@@ -1,4 +1,0 @@
-{
-  "rust-analyzer.linkedProjects": ["topcoat/Cargo.toml"],
-  "[rust]": { "editor.defaultFormatter": "rust-lang.rust-analyzer" }
-}

@@ -1,3 +1,0 @@
-[alias]
-# Compile every component source (they are `#[cfg(test)]` modules).
-check-components = "test --features stage-icons"
