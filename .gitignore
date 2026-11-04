@@ -12,3 +12,7 @@ dist
 
 # Personal notes
 /note.md
+
+# Vercel CLI's project link and OIDC token
+.vercel
+.env*

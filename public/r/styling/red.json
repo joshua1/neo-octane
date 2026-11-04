@@ -12,7 +12,7 @@
   ],
   "registryDependencies": [
     "utils",
-    "https://neobrutalism.dev/r/button.json"
+    "https://neobrutalism-octane.vercel.app/r/button.json"
   ],
   "cssVars": {
     "light": {

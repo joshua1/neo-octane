@@ -4,11 +4,11 @@
   "type": "registry:ui",
   "title": "Sidebar",
   "registryDependencies": [
-    "https://neobrutalism.dev/r/nbutton.json",
-    "https://neobrutalism.dev/r/nsheet.json",
-    "https://neobrutalism.dev/r/ntooltip.json",
-    "https://neobrutalism.dev/r/ninput.json",
-    "https://neobrutalism.dev/r/nskeleton.json"
+    "https://neobrutalism-octane.vercel.app/r/nbutton.json",
+    "https://neobrutalism-octane.vercel.app/r/nsheet.json",
+    "https://neobrutalism-octane.vercel.app/r/ntooltip.json",
+    "https://neobrutalism-octane.vercel.app/r/ninput.json",
+    "https://neobrutalism-octane.vercel.app/r/nskeleton.json"
   ],
   "files": [
     {

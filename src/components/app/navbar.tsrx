@@ -50,7 +50,7 @@ function Navbar({ starsCount }: { starsCount?: string | null }) @{
         <div class="flex items-center justify-end gap-4">
           <a
             target="_blank"
-            href="https://github.com/ekmas/neobrutalism-components"
+            href="https://github.com/joshua1/neobrutalism-octane"
             class="flex gap-2 items-center justify-center rounded-base border-2 border-border shadow-nav px-1.5 h-9 transition-all hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none"
           >
             @if (starsCount) {

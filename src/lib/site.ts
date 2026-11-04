@@ -13,6 +13,6 @@
 // VITE_SITE_URL here.
 export const SITE_URL: string =
   (import.meta.env.VITE_SITE_URL as string | undefined) ??
-  (import.meta.env.PROD ? "https://neobrutalism.dev" : "http://localhost:3000")
+  (import.meta.env.PROD ? "https://neobrutalism-octane.vercel.app" : "http://localhost:3000")
 
 export const REGISTRY_URL = `${SITE_URL}/r`

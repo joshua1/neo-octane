@@ -1,0 +1,11 @@
+# `vercel deploy` uploads the sources; Vercel installs and builds them itself.
+node_modules
+.output
+.nitro
+.tanstack
+.vinxi
+dist
+note.md
+# Vercel CLI's project link and OIDC token: never part of the upload.
+.vercel
+.env*

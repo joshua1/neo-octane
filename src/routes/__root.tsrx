@@ -22,7 +22,7 @@ import appCss from "@/styling/globals.css?url"
 // components") is applied by each route's own head().
 const DESCRIPTION =
   "A collection of neobrutalism-styled components based on shadcn/ui."
-const PREVIEW_IMAGE = "https://www.neobrutalism.dev/preview.png"
+const PREVIEW_IMAGE = "https://neobrutalism-octane.vercel.app/preview.png"
 
 export const Route = createRootRoute({
   head: () => ({
@@ -50,7 +50,7 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { property: "og:title", content: "Neobrutalism components" },
       { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "https://www.neobrutalism.dev/" },
+      { property: "og:url", content: "https://neobrutalism-octane.vercel.app/" },
       { property: "og:image", content: PREVIEW_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
       {

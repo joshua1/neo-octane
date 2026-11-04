@@ -8,7 +8,7 @@
     "class-variance-authority"
   ],
   "registryDependencies": [
-    "https://neobrutalism.dev/r/ntoggle.json"
+    "https://neobrutalism-octane.vercel.app/r/ntoggle.json"
   ],
   "files": [
     {

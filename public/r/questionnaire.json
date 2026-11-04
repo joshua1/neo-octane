@@ -7,7 +7,7 @@
     "@octanejs/lucide"
   ],
   "registryDependencies": [
-    "https://neobrutalism.dev/r/nbutton.json"
+    "https://neobrutalism-octane.vercel.app/r/nbutton.json"
   ],
   "files": [
     {

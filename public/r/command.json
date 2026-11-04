@@ -7,7 +7,7 @@
     "@octanejs/cmdk"
   ],
   "registryDependencies": [
-    "https://neobrutalism.dev/r/ndialog.json"
+    "https://neobrutalism-octane.vercel.app/r/ndialog.json"
   ],
   "files": [
     {

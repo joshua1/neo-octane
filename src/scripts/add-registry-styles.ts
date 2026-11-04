@@ -3,7 +3,7 @@ import path from "path"
 
 import colors, { ColorMode, ColorPalette } from "@/data/colors"
 
-const SITE_URL = "https://neobrutalism.dev"
+const SITE_URL = "https://neobrutalism-octane.vercel.app"
 
 const capitalize = (value: string) =>
   value.charAt(0).toUpperCase() + value.slice(1)

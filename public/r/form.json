@@ -9,8 +9,8 @@
     "@octanejs/hook-form"
   ],
   "registryDependencies": [
-    "https://neobrutalism.dev/r/nbutton.json",
-    "https://neobrutalism.dev/r/nlabel.json"
+    "https://neobrutalism-octane.vercel.app/r/nbutton.json",
+    "https://neobrutalism-octane.vercel.app/r/nlabel.json"
   ],
   "files": [
     {

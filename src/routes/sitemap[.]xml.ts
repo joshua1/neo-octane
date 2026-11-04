@@ -5,7 +5,7 @@ import COMPONENTS from "@/data/components"
 import { transformToSlug } from "@/lib/utils"
 
 // Port of app/sitemap.ts as a server route.
-const root = "https://www.neobrutalism.dev"
+const root = "https://neobrutalism-octane.vercel.app"
 
 const DOCS_PAGES = [
   "/docs",

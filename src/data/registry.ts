@@ -27,7 +27,7 @@ const UI = [
     title: "Alert dialog",
     type: "registry:ui",
     dependencies: ["@octanejs/base-ui"],
-    registryDependencies: ["https://neobrutalism.dev/r/nbutton.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/nbutton.json"],
     files: [
       {
         path: "src/components/ui/alert-dialog.tsrx",
@@ -98,7 +98,7 @@ const UI = [
     title: "Calendar",
     type: "registry:ui",
     dependencies: ["@octanejs/day-picker", "date-fns@^4"],
-    registryDependencies: ["https://neobrutalism.dev/r/nbutton.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/nbutton.json"],
     files: [
       {
         path: "src/components/ui/calendar.tsrx",
@@ -133,7 +133,7 @@ const UI = [
     title: "Carousel",
     type: "registry:ui",
     dependencies: ["@octanejs/embla-carousel"],
-    registryDependencies: ["https://neobrutalism.dev/r/nbutton.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/nbutton.json"],
     files: [
       {
         path: "src/components/ui/carousel.tsrx",
@@ -146,7 +146,7 @@ const UI = [
     title: "Chart",
     type: "registry:ui",
     dependencies: ["@octanejs/recharts", "@octanejs/lucide"],
-    registryDependencies: ["https://neobrutalism.dev/r/ncard.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/ncard.json"],
     files: [
       {
         path: "src/components/ui/chart.tsrx",
@@ -183,7 +183,7 @@ const UI = [
     title: "Command",
     type: "registry:ui",
     dependencies: ["@octanejs/cmdk"],
-    registryDependencies: ["https://neobrutalism.dev/r/ndialog.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/ndialog.json"],
     files: [
       {
         path: "src/components/ui/command.tsrx",
@@ -256,8 +256,8 @@ const UI = [
     type: "registry:ui",
     dependencies: ["@octanejs/base-ui", "arktype", "@octanejs/hook-form"],
     registryDependencies: [
-      "https://neobrutalism.dev/r/nbutton.json",
-      "https://neobrutalism.dev/r/nlabel.json",
+      "https://neobrutalism-octane.vercel.app/r/nbutton.json",
+      "https://neobrutalism-octane.vercel.app/r/nlabel.json",
     ],
     files: [
       {
@@ -390,7 +390,7 @@ const UI = [
     name: "pagination",
     title: "Pagination",
     type: "registry:ui",
-    registryDependencies: ["https://neobrutalism.dev/r/nbutton.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/nbutton.json"],
     files: [
       {
         path: "src/components/ui/pagination.tsrx",
@@ -499,11 +499,11 @@ const UI = [
     title: "Sidebar",
     type: "registry:ui",
     registryDependencies: [
-      "https://neobrutalism.dev/r/nbutton.json",
-      "https://neobrutalism.dev/r/nsheet.json",
-      "https://neobrutalism.dev/r/ntooltip.json",
-      "https://neobrutalism.dev/r/ninput.json",
-      "https://neobrutalism.dev/r/nskeleton.json",
+      "https://neobrutalism-octane.vercel.app/r/nbutton.json",
+      "https://neobrutalism-octane.vercel.app/r/nsheet.json",
+      "https://neobrutalism-octane.vercel.app/r/ntooltip.json",
+      "https://neobrutalism-octane.vercel.app/r/ninput.json",
+      "https://neobrutalism-octane.vercel.app/r/nskeleton.json",
     ],
     files: [
       {
@@ -628,7 +628,7 @@ const STARS = [
     title: "Attachment",
     type: "registry:ui",
     dependencies: ["@octanejs/base-ui", "class-variance-authority"],
-    registryDependencies: ["https://neobrutalism.dev/r/nbutton.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/nbutton.json"],
     files: [
       {
         path: "src/components/ui/attachment.tsrx",
@@ -689,7 +689,7 @@ const STARS = [
     title: "Field",
     type: "registry:ui",
     dependencies: ["class-variance-authority"],
-    registryDependencies: ["https://neobrutalism.dev/r/nlabel.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/nlabel.json"],
     files: [
       {
         path: "src/components/ui/field.tsrx",
@@ -703,9 +703,9 @@ const STARS = [
     type: "registry:ui",
     dependencies: ["class-variance-authority"],
     registryDependencies: [
-      "https://neobrutalism.dev/r/nbutton.json",
-      "https://neobrutalism.dev/r/ninput.json",
-      "https://neobrutalism.dev/r/ntextarea.json",
+      "https://neobrutalism-octane.vercel.app/r/nbutton.json",
+      "https://neobrutalism-octane.vercel.app/r/ninput.json",
+      "https://neobrutalism-octane.vercel.app/r/ntextarea.json",
     ],
     files: [
       {
@@ -765,7 +765,7 @@ const STARS = [
     title: "Message Scroller",
     type: "registry:ui",
     dependencies: ["@octanejs/lucide"],
-    registryDependencies: ["https://neobrutalism.dev/r/nbutton.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/nbutton.json"],
     files: [
       {
         path: "src/components/ui/message-scroller.tsrx",
@@ -843,7 +843,7 @@ const STARS = [
     title: "Questionnaire",
     type: "registry:ui",
     dependencies: ["@octanejs/lucide"],
-    registryDependencies: ["https://neobrutalism.dev/r/nbutton.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/nbutton.json"],
     files: [
       {
         path: "src/components/ui/questionnaire.tsrx",
@@ -925,7 +925,7 @@ const STARS = [
     title: "Toast",
     type: "registry:ui",
     dependencies: ["@octanejs/base-ui", "@octanejs/lucide"],
-    registryDependencies: ["https://neobrutalism.dev/r/nbutton.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/nbutton.json"],
     files: [
       {
         path: "src/components/ui/toast.tsrx",
@@ -950,7 +950,7 @@ const STARS = [
     title: "Toggle Group",
     type: "registry:ui",
     dependencies: ["@octanejs/base-ui", "class-variance-authority"],
-    registryDependencies: ["https://neobrutalism.dev/r/ntoggle.json"],
+    registryDependencies: ["https://neobrutalism-octane.vercel.app/r/ntoggle.json"],
     files: [
       {
         path: "src/components/ui/toggle-group.tsrx",

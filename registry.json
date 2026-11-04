@@ -37,7 +37,7 @@
         "@octanejs/base-ui"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json"
       ],
       "files": [
         {
@@ -121,7 +121,7 @@
         "date-fns@^4"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json"
       ],
       "files": [
         {
@@ -160,7 +160,7 @@
         "@octanejs/embla-carousel"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json"
       ],
       "files": [
         {
@@ -178,7 +178,7 @@
         "@octanejs/lucide"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/ncard.json"
+        "https://neobrutalism-octane.vercel.app/r/ncard.json"
       ],
       "files": [
         {
@@ -223,7 +223,7 @@
         "@octanejs/cmdk"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/ndialog.json"
+        "https://neobrutalism-octane.vercel.app/r/ndialog.json"
       ],
       "files": [
         {
@@ -311,8 +311,8 @@
         "@octanejs/hook-form"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json",
-        "https://neobrutalism.dev/r/nlabel.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json",
+        "https://neobrutalism-octane.vercel.app/r/nlabel.json"
       ],
       "files": [
         {
@@ -458,7 +458,7 @@
       "title": "Pagination",
       "type": "registry:ui",
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json"
       ],
       "files": [
         {
@@ -584,11 +584,11 @@
       "title": "Sidebar",
       "type": "registry:ui",
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json",
-        "https://neobrutalism.dev/r/nsheet.json",
-        "https://neobrutalism.dev/r/ntooltip.json",
-        "https://neobrutalism.dev/r/ninput.json",
-        "https://neobrutalism.dev/r/nskeleton.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json",
+        "https://neobrutalism-octane.vercel.app/r/nsheet.json",
+        "https://neobrutalism-octane.vercel.app/r/ntooltip.json",
+        "https://neobrutalism-octane.vercel.app/r/ninput.json",
+        "https://neobrutalism-octane.vercel.app/r/nskeleton.json"
       ],
       "files": [
         {
@@ -724,7 +724,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json"
       ],
       "files": [
         {
@@ -799,7 +799,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nlabel.json"
+        "https://neobrutalism-octane.vercel.app/r/nlabel.json"
       ],
       "files": [
         {
@@ -816,9 +816,9 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json",
-        "https://neobrutalism.dev/r/ninput.json",
-        "https://neobrutalism.dev/r/ntextarea.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json",
+        "https://neobrutalism-octane.vercel.app/r/ninput.json",
+        "https://neobrutalism-octane.vercel.app/r/ntextarea.json"
       ],
       "files": [
         {
@@ -887,7 +887,7 @@
         "@octanejs/lucide"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json"
       ],
       "files": [
         {
@@ -968,7 +968,7 @@
         "@octanejs/lucide"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json"
       ],
       "files": [
         {
@@ -1055,7 +1055,7 @@
         "@octanejs/lucide"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/nbutton.json"
+        "https://neobrutalism-octane.vercel.app/r/nbutton.json"
       ],
       "files": [
         {
@@ -1088,7 +1088,7 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "https://neobrutalism.dev/r/ntoggle.json"
+        "https://neobrutalism-octane.vercel.app/r/ntoggle.json"
       ],
       "files": [
         {

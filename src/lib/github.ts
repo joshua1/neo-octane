@@ -4,7 +4,7 @@
 // loader, with an in-memory cache standing in for Next's fetch cache.
 import { createServerFn } from "@octanejs/tanstack-start"
 
-const REPO_URL = "https://api.github.com/repos/ekmas/neobrutalism-components"
+const REPO_URL = "https://api.github.com/repos/joshua1/neobrutalism-octane"
 const TTL_MS = 60 * 60 * 1000
 
 let cached: { value: string | null; at: number } | undefined
@@ -24,8 +24,10 @@ export const getStarsCount = createServerFn({ method: "GET" }).handler(
     try {
       const res = await fetch(REPO_URL, { headers })
       if (res.ok) {
-        const repo = (await res.json()) as { stargazers_count: number }
-        value = (repo.stargazers_count / 1000).toFixed(1) + "k"
+        const { stargazers_count: stars } = (await res.json()) as {
+          stargazers_count: number
+        }
+        value = stars < 1000 ? String(stars) : (stars / 1000).toFixed(1) + "k"
       }
     } catch {
       value = null

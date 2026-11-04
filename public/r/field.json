@@ -7,7 +7,7 @@
     "class-variance-authority"
   ],
   "registryDependencies": [
-    "https://neobrutalism.dev/r/nlabel.json"
+    "https://neobrutalism-octane.vercel.app/r/nlabel.json"
   ],
   "files": [
     {

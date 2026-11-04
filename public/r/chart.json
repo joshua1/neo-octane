@@ -8,7 +8,7 @@
     "@octanejs/lucide"
   ],
   "registryDependencies": [
-    "https://neobrutalism.dev/r/ncard.json"
+    "https://neobrutalism-octane.vercel.app/r/ncard.json"
   ],
   "files": [
     {
